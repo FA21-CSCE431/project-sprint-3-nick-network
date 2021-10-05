@@ -23,10 +23,6 @@ default: &default
   host: localhost
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-<<<<<<< HEAD
-=======
-
->>>>>>> 1a3ba9ee1a0fb37510acb74648ea1e668f19079d
 
 development:
   <<: *default
