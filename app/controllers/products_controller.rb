@@ -47,6 +47,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def delete
+    @product = Product.find(params[:id])
+  end
+
   # DELETE /products/1 or /products/1.json
   def destroy
     @product.destroy

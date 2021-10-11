@@ -47,6 +47,10 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def delete
+    @meeting = Meeting.find(params[:id])
+  end
+
   # DELETE /meetings/1 or /meetings/1.json
   def destroy
     @meeting.destroy
