@@ -4,6 +4,22 @@ Rails.application.routes.draw do
   resources :meetings
   get 'about_us/Index'
   resources :events
+  resources :events do
+    member do
+      get :delete
+    end
+  end
+  resources :meetings do
+    member do
+      get :delete
+    end
+  end
+  resources :products do
+    member do
+      get :delete
+    end
+  end
+
   get 'landing/Index'
   root 'landing#Index'
 
