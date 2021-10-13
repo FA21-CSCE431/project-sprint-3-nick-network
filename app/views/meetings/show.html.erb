@@ -1,19 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @meeting.title %>
-</p>
+<div class="mx-auto" style="width: 200px; padding-left: 50px">
+  <div class="card" style="width: 18rem; border: 2px solid red;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @meeting.title %></h5>
+      <p class="card-text"><%= @meeting.description %></p>
+    </div>
+  </div>
+  <button type="button" class="btn btn-light"><%= link_to 'Edit', edit_meeting_path(@meeting) %></button>
+  <button type="button" class="btn btn-light"><%= link_to 'Back', meetings_path %></button>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @meeting.description %>
-</p>
-
-<p>
-  <strong>Meeting date:</strong>
-  <%= @meeting.meeting_date %>
-</p>
-
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
