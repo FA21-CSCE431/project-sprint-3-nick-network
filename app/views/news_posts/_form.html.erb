@@ -11,22 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mx-auto" style="width: 300px; margin-left: auto; margin-right: auto;">
+    <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
+      <div class="card-body"><center>
+        <h5 class="card-title"><div class="field"><strong><%= form.label :title %><%= form.text_field :title %></strong></div></h5>
+        <h5 class="card-title"><div class="field"><strong><%= form.label :userID %><%= form.text_field :userID %></strong></div></h5>
+
+        <p class="card-text"><em><%= form.label :description %><%= form.text_field :description %></em></p>
+      </center></div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :userID %>
-    <%= form.text_field :userID %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <center>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </center>
 <% end %>

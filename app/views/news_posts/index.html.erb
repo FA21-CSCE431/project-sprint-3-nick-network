@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<h1>News Feed</h1>
-
+<center>
+  <h1>News Feed</h1>
+</center>
 <table>
   <thead>
     <tr>
@@ -23,11 +23,12 @@
           <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
             <div class="card-body"><center>
               <h3 class="card-title"><strong><%= news_post.title %></strong></h3>
+              <h5 class="card-author"><strong> Post by: <%= news_post.userID %></strong></h5>
               <p class="card-text"><em><%= news_post.description %></em></p>
 
               <button type="button" class="btn btn-light"><%= link_to 'Show', news_post %></button>
               <button type="button" class="btn btn-light"><%= link_to 'Edit', edit_news_post_path(news_post) %></button>
-              <button type="button" class="btn btn-light"><%= link_to 'Back', news_posts_path %></button>
+              <button type="button" class="btn btn-light"><%= link_to 'Delete', delete_news_post_path(news_post) %></button>
             </center></div>
           </div>
         </div>
