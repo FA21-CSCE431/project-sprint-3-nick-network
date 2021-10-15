@@ -4,7 +4,7 @@ class CreateNewsPost < ActiveRecord::Migration[6.1]
       t.integer :userID
       t.string :title
       t.string :description
-      
+
       t.timestamps
     end
   end
