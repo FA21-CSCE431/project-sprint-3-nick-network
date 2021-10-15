@@ -8,24 +8,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <style>
+      /* Modify the background color */
+
+      .navbar-custom {
+          background-color: #500000;
+      }
+
+      ul.nav li a, ul.nav li a:visited {
+        color: white;
+      }
+
+      ul.nav li a:hover, ul.nav li a:active {
+        color: black;
+      }
+
+      ul.nav li.active a {
+        color: white;
+      }
+
+      .navbar-nav.navbar-center {
+          position: absolute;
+          left: 50%;
+          transform: translatex(-50%);
+      }
+
+    </style>
+
   </head>
 
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Nick-Network</a>
+
+  <nav class="navbar navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><%= image_tag ("/assets/imgNN.jpg"), class: "img-responsive", width: "25", height: "25" %></a>
+      </div>
+      <ul class="nav navbar-nav navbar-center">
+        <li> <%= link_to "Home", landing_Index_path, class:"nav-link"%> </li>
+        <li> <%= link_to "About Us", about_us_Index_path, class:"nav-link"%> </li>
+        <li> <%= link_to "Events", events_path, class:"nav-link"%> </li>
+        <li> <%= link_to "Meetings", meetings_path, class:"nav-link"%> </li>
+        <li> <%= link_to "News Feed", news_posts_path, class:"nav-link"%>  </li>
+        <li> Gallery </li>
+        <li> <%= link_to "Products", products_path, class:"nav-link"%> </li>
+        <li> <%= link_to "Contact", contact_index_path, class:"nav-link"%> </li>
+        <li> Members </li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li> <%= link_to "Home", landing_Index_path, class:"nav-link"%> </li>
-      <li> <%= link_to "About Us", about_us_Index_path, class:"nav-link"%> </li>
-      <li> <%= link_to "Events", events_path, class:"nav-link"%> </li>
-      <li> <%= link_to "Meetings", meetings_path, class:"nav-link"%> </li>
-      <li> <%= link_to "News Feed", news_posts_path, class:"nav-link"%>  </li>
-      <li> Gallery </li>
-      <li> <%= link_to "Products", products_path, class:"nav-link"%> </li>
-      <li> <%= link_to "Contact", contact_index_path, class:"nav-link"%> </li>
-      <li> Members </li>
-    </ul>
   </div>
 </nav>
 
