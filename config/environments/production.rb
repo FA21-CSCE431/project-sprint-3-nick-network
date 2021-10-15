@@ -1,5 +1,5 @@
 require "active_support/core_ext/integer/time"
-APPLICATIONNAME::Application.configure do
+nick-network-dev-fpikp73zdwnk3::Application.configure do
   config.assets.compile = true
 end
 
