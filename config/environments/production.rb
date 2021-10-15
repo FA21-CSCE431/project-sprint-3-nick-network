@@ -1,7 +1,5 @@
 require "active_support/core_ext/integer/time"
-nick-network-dev-fpikp73zdwnk3::Application.configure do
-  config.assets.compile = true
-end
+
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
