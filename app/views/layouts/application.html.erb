@@ -10,7 +10,7 @@
 
     <style>
       /* Modify the background color */
-        
+
       .navbar-custom {
           background-color: #500000;
       }
@@ -32,7 +32,7 @@
           left: 50%;
           transform: translatex(-50%);
       }
- 
+
     </style>
 
   </head>
@@ -48,7 +48,7 @@
         <li> <%= link_to "About Us", about_us_Index_path, class:"nav-link"%> </li>
         <li> <%= link_to "Events", events_path, class:"nav-link"%> </li>
         <li> <%= link_to "Meetings", meetings_path, class:"nav-link"%> </li>
-        <li> News Feed </li>
+        <li> <%= link_to "News Feed", news_posts_path, class:"nav-link"%>  </li>
         <li> Gallery </li>
         <li> <%= link_to "Products", products_path, class:"nav-link"%> </li>
         <li> <%= link_to "Contact", contact_index_path, class:"nav-link"%> </li>
@@ -61,7 +61,8 @@
         <% end %>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
   <body>

@@ -7,9 +7,15 @@ Rails.application.routes.draw do
   get 'contact/index'
   resources :products
   resources :meetings
+  resources :news_posts
   get 'about_us/Index'
   resources :events
   resources :events do
+    member do
+      get :delete
+    end
+  end
+  resources :news_posts do
     member do
       get :delete
     end
