@@ -53,6 +53,12 @@
         <li> <%= link_to "Products", products_path, class:"nav-link"%> </li>
         <li> <%= link_to "Contact", contact_index_path, class:"nav-link"%> </li>
         <li> Members </li>
+        <% if current_user %> 
+        <li> <%= link_to "Sign Out", destroy_user_session_path, class:"nav-link" %> </li>
+        <% end %>
+        <% if !current_user %> 
+        <li> <%= link_to "Sign In", user_google_oauth2_omniauth_authorize_path, class:"nav-link" %> </li>
+        <% end %>
       </ul>
     </div>
   </nav>

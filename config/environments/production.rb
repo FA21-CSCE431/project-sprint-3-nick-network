@@ -122,4 +122,6 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  ENV['GOOGLE_OAUTH_CLIENT_ID'] = '52567173804-avbva962t1t439mqjsps3lvbikvhlmhr.apps.googleusercontent.com'
+  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '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'
 end
