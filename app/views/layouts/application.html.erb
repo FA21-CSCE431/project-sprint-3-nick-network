@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="/assets/favicon.png"/>
 
     <style>
       /* Modify the background color */
         
       .navbar-custom {
           background-color: #500000;
+          margin-bottom: 0
       }
 
       ul.nav li a, ul.nav li a:visited {
@@ -32,6 +34,11 @@
           left: 50%;
           transform: translatex(-50%);
       }
+
+      
+    * {
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
  
     </style>
 
@@ -41,7 +48,10 @@
   <nav class="navbar navbar-custom">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><%= image_tag ("/assets/imgNN.jpg"), class: "img-responsive", width: "25", height: "25" %></a>
+        <a class="navbar-brand" href="#">
+        <%= image_tag ("/assets/imgNN.jpg") , class: "img-responsive", width: "25", height: "25" %>
+        </a>
+        <%= image_tag ("/assets/OrgName.jpg") %>
       </div>
       <ul class="nav navbar-nav navbar-center">
         <li> <%= link_to "Home", landing_Index_path, class:"nav-link"%> </li>
