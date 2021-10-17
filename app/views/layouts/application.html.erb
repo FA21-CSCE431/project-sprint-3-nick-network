@@ -56,6 +56,9 @@
         <% if current_user %> 
         <li> <%= link_to "Sign Out", destroy_user_session_path, class:"nav-link" %> </li>
         <% end %>
+        <% if !current_user %> 
+        <li> <%= link_to "Sign In", user_google_oauth2_omniauth_authorize_path, class:"nav-link" %> </li>
+        <% end %>
       </ul>
     </div>
   </nav>
