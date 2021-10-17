@@ -1,0 +1,30 @@
+<%= form_with(model: news_post) do |form| %>
+  <% if news_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news_post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% news_post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mx-auto" style="width: 300px; margin-left: auto; margin-right: auto;">
+    <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
+      <div class="card-body"><center>
+        <h5 class="card-title"><div class="field"><strong><%= form.label :title %><%= form.text_field :title %></strong></div></h5>
+        <h5 class="card-title"><div class="field"><strong><%= form.label :userID %><%= form.text_field :userID %></strong></div></h5>
+
+        <p class="card-text"><em><%= form.label :description %><%= form.text_field :description %></em></p>
+      </center></div>
+    </div>
+  </div>
+
+  <center>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </center>
+<% end %>
