@@ -2,5 +2,7 @@
 
 <%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<div class="container", style="margin-left: 8em;">
+  <%= link_to '<button type="button"> View </button>'.html_safe, @even %>
+  <%= link_to '<button type="button"> Back </button>'.html_safe, events_path %>
+</div>

@@ -1,19 +1,82 @@
+<head>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .css_img {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 65em;
+      margin: 0 auto;
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+
+ </style>
+</head>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<h1> <%= @event.title %> </h1>
+<div class="container">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <%= image_tag("/assets/Default.jpg", class: "css_img") %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="card-text"> <%= @event.description %> </p>
+              </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+              <table class="table table-sm">
+                <colgroup>
+                  <col span="1" style="width: 28%;">
+                  <col span="1" style="width: 72%;">
+                </colgroup>
 
-<p>
-  <strong>Event date:</strong>
-  <%= @event.event_date %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+                <tbody>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Time </th>
+                    <td> <%= @event.date_time.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Location </th>
+                    <td> <%= @event.location %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Additional Requirements </th>
+                    <td> <%= @event.add_req %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Created on </th>
+                    <td> <%= @event.created_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Last updated on </th>
+                    <td> <%= @event.updated_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="container", style="margin-left: 30em;">
+          <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_event_path(@event) %>
+          <%= link_to '<button type="button"> Back </button>'.html_safe, events_path %>
+        </div>
+</div>
