@@ -32,7 +32,8 @@ ActiveRecord::Schema.define(version: 2021_10_16_212425) do
   end
 
   create_table "news_posts", force: :cascade do |t|
-    t.integer "userID"
+    t.string "name"
+    t.string "userID"
     t.string "title"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
