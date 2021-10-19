@@ -1,3 +1,24 @@
+<head>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 2em;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .card:hover{
+      box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    }
+
+  </style>
+</head>
+
+
 <p id="notice"><%= notice %></p>
 <center>
   <h1>News Feed</h1>
@@ -19,12 +40,12 @@
   <tbody>
     <% @news_post.each do |news_post| %>
       <tr>
-        <div class="mx-auto" style="width: 300px; margin-left: auto; margin-right: auto;">
-          <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
+        <div class="mx-auto" style="width: 65%; margin-left: auto; margin-right: auto;">
+          <div class="card" style="width: 65%; border: 3px solid black; margin-left: auto; margin-right: auto;">
             <div class="card-body"><center>
               <h3 class="card-title"><strong><%= news_post.title %></strong></h3>
               <h5 class="card-author"><strong> Posted by: <%= news_post.name %></strong></h5>
-              <h5 class="card-post-date"><strong>Posted on: <%= news_post.created_at.strftime("%m-%d-%Y") %></strong></h5>
+              <h5 class="card-post-date"><strong>Posted on: <%= news_post.created_at.strftime("%m-%d-%Y") %></strong></h5><br>
               <p class="card-text"><em><%= news_post.description %></em></p>
 
               <button type="button" class="btn btn-light"><%= link_to 'Show', news_post %></button>
