@@ -49,7 +49,7 @@
               <h3 class="card-title"><%= news_post.title %></h3>
               <h5 class="card-author"> Posted by: <%= news_post.name %></h5>
               <h5 class="card-post-date">Posted on: <%= news_post.created_at.strftime("%m-%d-%Y") %></h5>
-              <hr><p class="card-text"><em><%= news_post.description %></em></p>
+              <hr><p class="card-text"><em><%= news_post.description %></em></p><hr>
 
               <%= link_to 'Show', news_post, :class => "btn btn-primary" %>
               <%= link_to 'Edit', edit_news_post_path(news_post), :class => "btn btn-primary" %>
