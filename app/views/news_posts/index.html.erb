@@ -23,7 +23,7 @@
           <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
             <div class="card-body"><center>
               <h3 class="card-title"><strong><%= news_post.title %></strong></h3>
-              <h5 class="card-author"><strong> Posted by: <%= news_post.userID %>'s Username</strong></h5>
+              <h5 class="card-author"><strong> Posted by: <%= news_post.name %></strong></h5>
               <h5 class="card-post-date"><strong>Posted on: <%= news_post.created_at.strftime("%m-%d-%Y") %></strong></h5>
               <p class="card-text"><em><%= news_post.description %></em></p>
 
