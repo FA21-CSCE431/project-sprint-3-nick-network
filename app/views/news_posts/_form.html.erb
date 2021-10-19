@@ -16,8 +16,8 @@
       <div class="card-body"><center>
         User ID: <%= form.label :userID, current_user.uid %><%= form.hidden_field :userID, value: current_user.uid %><br>
         Your name: <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %>
-        <h5 class="card-title"><div class="field"><strong><%= form.label :title %><%= form.text_field :title %></strong></div></h5>
-        <p class="card-text"><em><%= form.label :description %><%= form.text_field :description %></em></p>
+        <h5 class="card-title"><div class="field"><strong><%= form.label :title %><br><%= form.text_field :title %></strong></div></h5>
+        <p><em><%= form.label :description %><br><%= form.text_area :description, :rows => 10 %></em></p>
       </center></div>
     </div>
   </div>
