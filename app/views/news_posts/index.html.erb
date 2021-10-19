@@ -15,28 +15,31 @@
       box-shadow: 0 5px 10px rgba(0,0,0,.5);
     }
 
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
   </style>
 </head>
 
 
 <p id="notice"><%= notice %></p>
-<center>
-  <h1>News Feed</h1>
-</center>
+<h1>News Feed</h1>
 <table>
   <thead>
     <tr>
       <th colspan="3"></th>
     </tr>
   </thead>
-
-
   <center>
-    <h2>
-        <%= link_to 'New Post', new_news_post_path %>
-    </h2>
+    <div class="button-container">
+        <%= link_to '<button type="button">New Post</button>'.html_safe, new_news_post_path %>
+    </div>
   </center>
-
+  <br>
   <tbody>
     <% @news_post.each do |news_post| %>
       <tr>
