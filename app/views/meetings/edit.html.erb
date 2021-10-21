@@ -2,5 +2,7 @@
 
 <%= render 'form', meeting: @meeting %>
 
-<%= link_to 'Show', @meeting %> |
-<%= link_to 'Back', meetings_path %>
+<div class="container", style="margin-left: 12em;">
+  <%= link_to '<button type="button"> View </button>'.html_safe, @meeting %>
+  <%= link_to '<button type="button"> Back </button>'.html_safe, meetings_path %>
+</div>
