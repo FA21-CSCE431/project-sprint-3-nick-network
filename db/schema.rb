@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_10_17_234727) do
     t.string "title"
     t.string "description"
     t.date "meeting_date"
+    t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
