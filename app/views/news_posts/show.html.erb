@@ -1,14 +1,46 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <style>
 
-<div class="mx-auto" style="width: 300px; margin-left: auto; margin-right: auto;">
-  <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
-    <div class="card-body"><center>
-      <h3 class="card-title"><strong><%= @news_post.title %></strong></h3>
-      <p class="card-text"><em><%= @news_post.description %></em></p>
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 2em;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .card:hover{
+      box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+  </style>
+</head>
+
+<p id="notice"><%= notice %></p>
+<br>
+<div class="mx-auto" style="width: 65%; margin-left: auto; margin-right: auto;">
+  <div class="card" style="width: 65%; border: 3px solid black; margin-left: auto; margin-right: auto;">
+    <div class="card-body" style="padding: 2%"><center>
+      <h3 class="card-title"><%= @news_post.title %></h3>
+      <h5 class="card-author"> Posted by: <%= @news_post.name %></h5>
+      <h5 class="card-post-date">Posted on: <%= @news_post.created_at.strftime("%m-%d-%Y") %></h5>
+      <hr><p class="card-text"><em><%= @news_post.description %></em></p><hr>
+
+      <%= link_to 'Edit', edit_news_post_path(@news_post), :class => "btn btn-primary" %>
+      <%= link_to 'Delete', delete_news_post_path(@news_post), :class => "btn btn-primary" %>
+      <%= link_to 'Reply', @news_post, :class => "btn btn-primary" %>
     </center></div>
   </div>
 </div>
 <center>
-  <%= link_to 'Show', @news_post %> |
-  <%= link_to 'Back', news_posts_path %>
+  <br><%= link_to 'Back', news_posts_path %>
 </center>
