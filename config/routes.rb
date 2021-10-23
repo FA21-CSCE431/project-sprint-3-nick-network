@@ -1,9 +1,36 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_scope :user do
+    get 'users/sign_in', to: 'users/sessions#new', as: :new_user_session
+    get 'users/sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
+  end
   get 'contact/index'
   resources :products
   resources :meetings
+  resources :news_posts
   get 'about_us/Index'
   resources :events
+  resources :events do
+    member do
+      get :delete
+    end
+  end
+  resources :news_posts do
+    member do
+      get :delete
+    end
+  end
+  resources :meetings do
+    member do
+      get :delete
+    end
+  end
+  resources :products do
+    member do
+      get :delete
+    end
+  end
+
   get 'landing/Index'
   root 'landing#Index'
 

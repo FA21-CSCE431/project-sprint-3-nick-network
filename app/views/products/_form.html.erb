@@ -1,32 +1,80 @@
-<%= form_with(model: product) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<head>
+  <style>
+    h1 {
+      text-align: center;
+    }
 
-      <ul>
-        <% product.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    .container {
+      max-width: 31em;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .bigger-container {
+      max-width: 35em;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+    }
+
+    input {
+      padding: 12px 20px;
+      width: 400px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    input[type=text]:focus {
+      background-color: lightgrey;
+      word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    textarea {
+      width: 400px;
+      height: 100px;
+    }
+
+
+  </style>
+</head>
+
+<div class="bigger-container">
+  <div class="container">
+  <%= form_with(model: product) do |form| %>
+    <% if product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+        <ul>
+          <% product.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <div class="field">
+      <%= form.label :name %>
+      <br>
+      <%= form.text_field :name, placeholder: "Enter Product Name" %>
     </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <br>
+      <%= form.text_area :description, placeholder: "Enter Product Description.." %>
+    </div>
+
+    <div class="field", style="max-width: 13rem">
+      <%= form.label :price, "Enter Product Cost" %>
+      <br>
+      <%= form.text_field :price %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

@@ -1,19 +1,78 @@
+<head>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .css_img {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 65em;
+      margin: 0 auto;
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+
+ </style>
+</head>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @meeting.title %>
-</p>
+<h1> <%= @meeting.title %> </h1>
+<div class="container">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="card-text"> <%= @meeting.description %> </p>
+              </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @meeting.description %>
-</p>
+              <table class="table table-sm">
+                <colgroup>
+                  <col span="1" style="width: 28%;">
+                  <col span="1" style="width: 72%;">
+                </colgroup>
 
-<p>
-  <strong>Meeting date:</strong>
-  <%= @meeting.meeting_date %>
-</p>
-
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
+                <tbody>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Time </th>
+                    <td> <%= @meeting.meeting_date.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Location </th>
+                    <td> <%= @meeting.location %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Created on </th>
+                    <td> <%= @meeting.created_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Last updated on </th>
+                    <td> <%= @meeting.updated_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="container", style="margin-left: 30em;">
+          <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_meeting_path(@meeting) %>
+          <%= link_to '<button type="button"> Back </button>'.html_safe, meetings_path %>
+        </div>
+</div>

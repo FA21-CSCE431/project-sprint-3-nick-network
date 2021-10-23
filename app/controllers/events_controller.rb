@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_event, only: %i[ show edit update destroy ]
 
   # GET /events or /events.json
@@ -47,6 +48,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def delete
+    @event = Event.find(params[:id])
+  end
+
   # DELETE /events/1 or /events/1.json
   def destroy
     @event.destroy
@@ -64,6 +69,6 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :description, :event_date)
+      params.require(:event).permit(:title, :description, :date_time, :location, :add_req)
     end
 end

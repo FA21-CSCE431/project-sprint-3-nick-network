@@ -1,4 +1,5 @@
 class MeetingsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_meeting, only: %i[ show edit update destroy ]
 
   # GET /meetings or /meetings.json
@@ -47,6 +48,10 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def delete
+    @meeting = Meeting.find(params[:id])
+  end
+
   # DELETE /meetings/1 or /meetings/1.json
   def destroy
     @meeting.destroy
@@ -64,6 +69,6 @@ class MeetingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def meeting_params
-      params.require(:meeting).permit(:title, :description, :meeting_date)
+      params.require(:meeting).permit(:title, :description, :meeting_date, :location)
     end
 end

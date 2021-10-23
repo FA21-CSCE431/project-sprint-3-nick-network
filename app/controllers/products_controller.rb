@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_product, only: %i[ show edit update destroy ]
 
   # GET /products or /products.json
@@ -45,6 +46,10 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def delete
+    @product = Product.find(params[:id])
   end
 
   # DELETE /products/1 or /products/1.json
