@@ -6,7 +6,7 @@ jobs:
     
     services:
       db:
-        image: postgres:11
+        image: dmartinez05/ruby_rails_postgresql:latest
         ports: ["5432:5432"]
         env:
           POSTGRES_USER: test_app
@@ -35,8 +35,8 @@ jobs:
           DATABASE_URL: postgres://postgres:@localhost:5432/test
           REDIS_URL: redis://localhost:6379/0
           RAILS_ENV: test
-          POSTGRES_USER: test_app
-          POSTGRES_PASSWORD: test_password
+          POSTGRES_USER: ENV['DATABASE_USER']
+          POSTGRES_PASSWORD: ENV['DATABASE_PASSWORD']
         run: |
           sudo apt-get -yqq install libpq-dev
           gem install bundler
