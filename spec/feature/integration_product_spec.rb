@@ -1,16 +1,15 @@
+# frozen_string_literal: true
+
 # location: spec/feature/integration_spec.rb
 require 'rails_helper'
 
-
 def login
-  Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google]
+  Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google]
   visit root_path
   click_link 'Sign In'
 end
 
-
 RSpec.describe 'Creating a new event', type: :feature do
-
   scenario 'valid Product' do
     login
     visit new_product_path
@@ -23,5 +22,4 @@ RSpec.describe 'Creating a new event', type: :feature do
     expect(page).to have_content('Nick spirit wear')
     expect(page).to have_content('20')
   end
-
 end

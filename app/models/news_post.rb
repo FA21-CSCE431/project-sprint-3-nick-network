@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class NewsPost < ApplicationRecord
-    validates :name, presence: true
-    validates :userID, presence: true
-    validates :title, presence: true
-    validates :description, presence: true
+  validates :name, presence: true
+  validates :userID, presence: true
+  validates :title, presence: true
+  validates :description, presence: true
 end

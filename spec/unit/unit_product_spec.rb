@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # location: spec/unit/unit_meetingspec.rb
 require 'rails_helper'
 
@@ -24,5 +26,4 @@ RSpec.describe Product, type: :model do
     subject.price = nil
     expect(subject).not_to be_valid
   end
-
 end
