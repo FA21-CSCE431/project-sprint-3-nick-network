@@ -5,8 +5,7 @@ require 'rails_helper'
 
 RSpec.describe NewsPost, type: :model do
   subject do
-    described_class.new(title: 'All Nicks', description: 'Meeting with the Nicks. Ice cream will be served',
-                        userID: '12345', name: 'Bob the Builder')
+    described_class.new(title: 'All Nicks', description: 'Meeting with the Nicks. Ice cream will be served', userID: '12345', name: 'Bob the Builder')
   end
 
   it 'is valid with valid attributes' do
