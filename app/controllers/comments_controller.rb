@@ -1,11 +1,5 @@
 class CommentsController < ApplicationController
 
-
-
-  ActiveRecord::Base.belongs_to :news_post
-  #ActiveRecord::Base.has_many :news_comments
-  #ActiveRecord::Base.has_many :news_post, :through => :news_comments
-
   # GET / or /comments.json
   def index
     @comment = Comment.all
