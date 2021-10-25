@@ -6,7 +6,7 @@ jobs:
     
     services:
       db:
-        image: dmartinez05/ruby_rails_postgresql:latest
+        image: postgres:latest
         ports: ["5432:5432"]
         env:
           POSTGRES_USER: test_app
