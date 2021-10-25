@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 # location: spec/unit/unit_meetingspec.rb
 require 'rails_helper'
 
 RSpec.describe Meeting, type: :model do
   subject do
-    described_class.new(title: 'All Nicks', description: 'Meeting with the Nicks. Ice cream will be served', meeting_date: '2021-05-25')
+    described_class.new(title: 'All Nicks', description: 'Meeting with the Nicks. Ice cream will be served',
+                        meeting_date: '2021-10-24T00:00:00', location: 'College Station')
   end
 
   it 'is valid with valid attributes' do
