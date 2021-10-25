@@ -4,6 +4,11 @@ class MeetingsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @meeting = meetings(:one)
   end
+  
+  test "should get index" do
+    get stories_url
+    assert_response :success 
+  end
 
   test "should get index" do
     get meetings_url
