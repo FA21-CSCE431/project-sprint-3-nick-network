@@ -39,15 +39,48 @@
       <%= link_to 'Edit', edit_news_post_path(@news_post), :class => "btn btn-primary" %>
       <%= link_to 'Delete', delete_news_post_path(@news_post), :class => "btn btn-primary" %>
       <%= link_to 'Reply', @news_post, :class => "btn btn-primary" %>
+    </center></div>
+  </div>
+</div>
 
-      <% @news_post.comments.each do |comment| %>
-       <%= comment.description %>
-      <% end %>
+
+
+<div class="mx-auto" style="width: 65%; margin-left: auto; margin-right: auto;">
+  <div class="card" style="width: 65%; border: 3px solid blue; margin-left: auto; margin-right: auto;">
+    <div class="card-body" style="padding: 2%"><center>
+      <h3 class="card-title">Comments</h3>
+
+
+
+        <table class="table table-bordered border-primary table-striped">
+
+          <tbody>
+
+            <% for comment in @news_post.comments %>
+
+            <tr>
+              <td> <%= comment.description %> </td>
+            </tr>
+
+            <tr>
+              <td> Posted by NICK, on <%= @news_post.created_at.strftime("%m-%d-%Y") %></td>
+            </tr>
+
+            <% end %>
+
+          </tbody>
+        </table>
 
 
     </center></div>
   </div>
 </div>
+
+
+<div class="button-container">
+  <%= link_to '<button type="button">Add New Comment</button>'.html_safe, "/comments/new?news_post=#{@news_post.id}" %>
+</div>
+
 <center>
   <br><%= link_to 'Back', news_posts_path %>
 </center>

@@ -15,7 +15,10 @@
     <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
       <div class="card-body"><center>
         User ID: <%= form.label :userID, current_user.uid %><%= form.hidden_field :userID, value: current_user.uid %><br>
-        Your name: <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %>
+        Your name: <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %><br>
+
+        News Post ID: <%= form.label :news_post_id, "news_post_id" %><%= form.hidden_field :news_post_id, value: params[:news_post] %>
+
         <p><em><%= form.label :description %><br><%= form.text_area :description, :rows => 10 %></em></p>
       </center></div>
     </div>
