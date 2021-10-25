@@ -1,21 +1,25 @@
-class CommentsController < ActiveRecord::Base
+class CommentsController < ApplicationController
 
 
-  has_many :news_comments
-  has_many :news_post, :through => :news_comments
+
+  ActiveRecord::Base.belongs_to :news_post
+  #ActiveRecord::Base.has_many :news_comments
+  #ActiveRecord::Base.has_many :news_post, :through => :news_comments
 
   # GET / or /comments.json
   def index
-    @comments = Comment.all
+    @comment = Comment.all
   end
 
   # GET /comments/1 or /comments/1.json
   def show
+    @comment = Comment.find(params[:id])
+    render :comment => nil
   end
 
   # GET /comments/new
   def new
-    @comments = Comment.new
+    @comment = Comment.new
   end
 
   # GET /comments/1/edit
@@ -24,15 +28,15 @@ class CommentsController < ActiveRecord::Base
 
   # POST /comments or /comments.json
   def create
-    @comments = Comment.new(comment_params)
+    @comment = Comment.new(comment_params)
 
     respond_to do |format|
-      if @comments.save
-        format.html { redirect_to @comments, notice: "Post was successfully created." }
-        format.json { render :show, status: :created, location: @comments }
+      if @comment.save
+        format.html { redirect_to @comment, notice: "Comment was successfully created." }
+        format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @commentsPost.errors, status: :unprocessable_entity }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -40,25 +44,25 @@ class CommentsController < ActiveRecord::Base
   # PATCH/PUT /comments/1 or /comments/1.json
   def update
     respond_to do |format|
-      if @comments.update(comment_params)
-        format.html { redirect_to @comments, notice: "Event was successfully updated." }
-        format.json { render :show, status: :ok, location: @comments }
+      if @comment.update(comment_params)
+        format.html { redirect_to @comment, notice: "Comment was successfully updated." }
+        format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @commentsPost.errors, status: :unprocessable_entity }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def delete
-    @comments = Comment.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   # DELETE /comments/1 or /comments/1.json
   def destroy
-    @comments.destroy
+    @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: "Post was successfully destroyed." }
+      format.html { redirect_to comments_url, notice: "Comment was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -66,11 +70,11 @@ class CommentsController < ActiveRecord::Base
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      @comments = Comment.find(params[:id])
+      @comment = Comment.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comments).permit(:name, :comment)
+      params.require(:comment).permit(:description, :userID)
     end
 end

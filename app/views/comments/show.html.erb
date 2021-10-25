@@ -30,18 +30,15 @@
 <div class="mx-auto" style="width: 65%; margin-left: auto; margin-right: auto;">
   <div class="card" style="width: 65%; border: 3px solid black; margin-left: auto; margin-right: auto;">
     <div class="card-body" style="padding: 2%"><center>
-      <h3 class="card-title"><%= @news_post.title %></h3>
-      <h5 class="card-author"> Posted by: <%= @news_post.name %></h5>
-      <h5 class="card-post-date">Posted on: <%= @news_post.created_at.strftime("%m-%d-%Y") %></h5>
-      <hr><p class="card-text"><em><%= @news_post.description %></em></p><hr>
+      <h5 class="card-post-date">Posted on: <%= @comment.created_at.strftime("%m-%d-%Y") %></h5>
+      <hr><p class="card-text"><em><%= @comment.description %></em></p><hr>
 
-          
-      <%= link_to 'Edit', edit_news_post_path(@news_post), :class => "btn btn-primary" %>
-      <%= link_to 'Delete', delete_news_post_path(@news_post), :class => "btn btn-primary" %>
-      <%= link_to 'Reply', @news_post, :class => "btn btn-primary" %>
+      <%= link_to 'Edit', edit_comment_path(@comment), :class => "btn btn-primary" %>
+      <%= link_to 'Delete', delete_comment_path(@comment), :class => "btn btn-primary" %>
+      <%= link_to 'Reply', @comment, :class => "btn btn-primary" %>
     </center></div>
   </div>
 </div>
 <center>
-  <br><%= link_to 'Back', news_posts_path %>
+  <br><%= link_to 'Back', comment_path %>
 </center>

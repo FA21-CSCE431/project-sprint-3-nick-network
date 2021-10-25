@@ -1,10 +1,10 @@
 class NewsPostsController < ApplicationController
-#class NewsPostsController < ActiveRecord::Base
   before_action :authenticate_user!
   before_action :set_news_post, only: %i[ show edit update destroy ]
 
-  ActiveRecord::Base.has_many :news_comments
-  ActiveRecord::Base.has_many :comments, :through => :news_comments
+  #ActiveRecord::Base.has_many :news_comments
+  #ActiveRecord::Base.has_many :comment, :through => :news_comments
+  ActiveRecord::Base.has_many :comment, :dependent => :destroy
 
   # GET /events or /events.json
   def index

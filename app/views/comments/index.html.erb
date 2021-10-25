@@ -1,0 +1,65 @@
+<head>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 2em;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .card:hover{
+      box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+  </style>
+</head>
+
+
+<p id="notice"><%= notice %></p>
+<h1>Comments Feed</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <center>
+    <div class="button-container">
+        <%= link_to '<button type="button">New Comment</button>'.html_safe, new_comment_path %>
+    </div>
+  </center>
+  <br>
+  <tbody>
+    <% @comment.each do |comment| %>
+      <tr>
+        <div class="mx-auto" style="width: 65%; margin-left: auto; margin-right: auto;">
+          <div class="card" style="width: 65%; border: 3px solid black; margin-left: auto; margin-right: auto;">
+            <div class="card-body" style="padding: 2%"><center>
+              <h5 class="card-post-date">Posted on: <%= comment.created_at.strftime("%m-%d-%Y") %></h5>
+              <hr><p class="card-text"><em><%= comment.description %></em></p><hr>
+
+              <%= link_to 'Show', comment, :class => "btn btn-primary" %>
+              <%= link_to 'Edit', edit_comment_path(comment), :class => "btn btn-primary" %>
+              <%= link_to 'Delete', delete_comment_path(comment), :class => "btn btn-primary" %>
+              <%= link_to 'Reply', comment, :class => "btn btn-primary" %>
+            </center></div>
+          </div>
+        </div>
+      </tr>
+      <br>
+    <% end %>
+  </tbody>
+</table>
+<br>
