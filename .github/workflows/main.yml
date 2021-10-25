@@ -9,8 +9,8 @@ jobs:
         image: postgres:latest
         ports: ["5432:5432"]
         env:
-          POSTGRES_USER: test_app
-          POSTGRES_PASSWORD: test_password
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -41,6 +41,6 @@ jobs:
           sudo apt-get -yqq install libpq-dev
           gem install bundler
           bundle install --jobs 4 --retry 3
-          bundle exec rake db:create 
-          bundle exec rake db:migrate 
+          bundle exec rake db:create
+          bundle exec rake db:migrate
           bundle exec rspec .
