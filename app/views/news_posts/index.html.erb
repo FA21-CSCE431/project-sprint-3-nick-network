@@ -50,11 +50,10 @@
               <h5 class="card-author"> Posted by: <%= news_post.name %></h5>
               <h5 class="card-post-date">Posted on: <%= news_post.created_at.strftime("%m-%d-%Y") %></h5>
               <hr><p class="card-text"><em><%= news_post.description %></em></p><hr>
-
+              Post has <%= news_post.comments.size %> comment(s) <br>
               <%= link_to 'Show', news_post, :class => "btn btn-primary" %>
               <%= link_to 'Edit', edit_news_post_path(news_post), :class => "btn btn-primary" %>
               <%= link_to 'Delete', delete_news_post_path(news_post), :class => "btn btn-primary" %>
-              <%= link_to 'Reply', news_post, :class => "btn btn-primary" %>
             </center></div>
           </div>
         </div>

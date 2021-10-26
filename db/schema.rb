@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_210725) do
+ActiveRecord::Schema.define(version: 2021_10_22_210659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.string "name"
     t.string "description"
     t.integer "news_post_id"
     t.datetime "created_at", precision: 6, null: false
@@ -37,13 +38,6 @@ ActiveRecord::Schema.define(version: 2021_10_22_210725) do
     t.string "description"
     t.date "meeting_date"
     t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "news_comments", force: :cascade do |t|
-    t.integer "news_ID"
-    t.integer "comment_ID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
