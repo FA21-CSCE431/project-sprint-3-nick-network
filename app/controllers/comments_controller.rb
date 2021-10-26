@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_comment, only: %i[ show edit update destroy ]
 
   # GET / or /comments.json
@@ -68,6 +69,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:description, :news_post_id)
+      params.require(:comment).permit(:name, :description, :news_post_id)
     end
 end

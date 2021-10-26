@@ -60,11 +60,25 @@
       <h3 class="card-title">Comments</h3>
 
         <table class="table table-bordered border-primary">
+
+          <% if @news_post.comments.blank? %>
+            <%= "Be the first one to comment!" %>
+          <% end %>
+
+
           <tbody>
             <% for comment in @news_post.comments %>
             <tr>
               <td> <%= comment.description %> <br> <br>
-                    Posted by <%= @news_post.name %>, on <%= @news_post.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+
+                    <%= "Posted by " + comment.name + ", on "%>
+                    <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+
+                    <% if comment.created_at != comment.updated_at %>
+                      <br> <%= "Edited on " + comment.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>
+                    <% end %>
+
+
                     <br>
                     <%= link_to 'Edit', edit_comment_path(comment)%>
                     <%= link_to 'Delete', delete_comment_path(comment) %>
