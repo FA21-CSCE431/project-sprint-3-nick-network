@@ -48,13 +48,13 @@
 
       <div class="inner container">
         <center><h1>About Us</h1>        
-        <img class="img-responsive" width="250" height="250" src="/assets/imgNN.jpg">
+        <img class="img-responsive" width="250" height="250" src="https://nick-network.s3.us-east-2.amazonaws.com/imgNN.jpg">
         <p class="text">
           <center><h2 style="font-size:20px"> 
           We are the Aggie Nickwork, a group of students who aim to bring the Nicks of Texas A&M together. 
           We offer Nicks the opportuninty to meet each other and host events for Nicks to attend. 
           Everyone is welcome to join, even if your name is not Nick 
-          (the name you choose to be referred to as must include some variation of “Nic,” however).
+          (the name you choose to be referred to as must include some variation of “Nic, Nich”).
           </h2>
         </p>
         <h2> History </h2>
@@ -66,11 +66,11 @@
 <div class="President" style="width: 18rem;">
   
   <div class="card">
-    <img class="css_img" src="/assets/Nick.jpeg" alt="Card image cap" width="150" height="200">
+    <img class="css_img" src="https://nick-network.s3.us-east-2.amazonaws.com/Nick-hutch.PNG" alt="Card image cap" width="150" height="200">
     <h5 class="Title">President</h5>
     <h5 class="name">Nicolas Hutcheson</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-    <a href="http://127.0.0.1:3000/contact/index" class="btn btn-primary">Contact</a>
+    <%= link_to '<button type="button"> Contact </button>'.html_safe, contact_index_path %>
   </div>
 </div>
 
