@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # location: spec/unit/unit_meetingspec.rb
 require 'rails_helper'
 
