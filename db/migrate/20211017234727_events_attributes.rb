@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EventsAttributes < ActiveRecord::Migration[6.1]
   def change
     remove_columns(:events, :event_date, :created_at, :updated_at)

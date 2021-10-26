@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 # location: spec/unit/unit_eventspec.rb
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
   subject do
-    described_class.new(title: 'All Nicks', description: 'Meeting with the Nicks. Ice cream will be served', event_date: '2021-05-25')
+    described_class.new(title: 'All Nicks', description: 'Meeting with the Nicks. Ice cream will be served',
+                        date_time: '2021-10-24T00:00:00', location: 'College Station')
   end
 
   it 'is valid with valid attributes' do
@@ -21,7 +24,7 @@ RSpec.describe Event, type: :model do
   end
 
   it 'is not valid without a event date' do
-    subject.event_date = nil
+    subject.date_time = nil
     expect(subject).not_to be_valid
   end
 end
