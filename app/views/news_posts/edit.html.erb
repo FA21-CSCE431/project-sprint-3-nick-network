@@ -1,8 +1,15 @@
-<h1>Editing Post!</h1>
+<% if current_user.uid == @news_post.userID || current_user.uid == "110391296899575374577" %>
+  <h1>Editing Post!</h1>
 
-<%= render 'form', news_post: @news_post %>
+  <%= render 'form', news_post: @news_post %>
 
-<center>
-<%= link_to 'Show', @news_post %> |
-<%= link_to 'Back', news_post_path %>
-</center>
+  <center>
+  <%= link_to 'Show', @news_post %> |
+  <%= link_to 'Back', news_post_path %>
+  </center>
+<% else %>
+  <center>
+  <h1>Not your post!</h1>
+  <%= link_to 'Back', news_post_path %>
+  </center>
+<% end %>
