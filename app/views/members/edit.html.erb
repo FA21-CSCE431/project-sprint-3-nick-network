@@ -1,0 +1,8 @@
+<h1>Editing Meeting</h1>
+
+<%= render 'form', meeting: @meeting %>
+
+<div class="container", style="margin-left: 12em;">
+  <%= link_to '<button type="button"> View </button>'.html_safe, @meeting %>
+  <%= link_to '<button type="button"> Back </button>'.html_safe, meetings_path %>
+</div>
