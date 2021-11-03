@@ -1,4 +1,4 @@
-<% if current_user.uid == "110391296899575374577" %>
+<% if current_user.uid == "110391296899575374577" && !(news_post.userID.blank?)  %>
   <%= form_with(model: news_post) do |form| %>
     <% if news_post.errors.any? %>
       <div id="error_explanation">

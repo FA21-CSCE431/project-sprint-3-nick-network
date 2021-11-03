@@ -24,7 +24,7 @@ default: &default
   # username: <%= ENV['DATABASE_USER'] %>
   # password: <%= ENV['DATABASE_PASSWORD'] %>
   username: postgres
-  password: postgres 
+  password: postgres
 
 development:
   <<: *default
