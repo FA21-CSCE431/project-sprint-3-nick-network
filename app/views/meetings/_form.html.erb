@@ -37,50 +37,56 @@
 
   </style>
 </head>
+<% if current_user.uid == "110391296899575374577" %>
+  <div class="bigger-container">
+    <div class="container">
+    <%= form_with(model: meeting) do |form| %>
+      <% if meeting.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
 
-<div class="bigger-container">
-  <div class="container">
-  <%= form_with(model: meeting) do |form| %>
-    <% if meeting.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+          <ul>
+            <% meeting.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-        <ul>
-          <% meeting.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
+
+      <div class="field">
+        <%= form.label :title %>
+        <br>
+        <%= form.text_field :title, placeholder: "Enter title.." %>
       </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <br>
+        <%= form.text_area :description, placeholder: "Enter description.." %>
+      </div>
+
+      <div class="field", style="max-width: 13rem">
+        <%= form.label :meeting_date, "Date and time" %>
+        <br>
+        <%= form.datetime_field :meeting_date %>
+      </div>
+
+      <div class="field">
+        <%= form.label :location %>
+        <br>
+        <%= form.text_field :location, placeholder: "Enter location.." %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
     <% end %>
-
-
-    <div class="field">
-      <%= form.label :title %>
-      <br>
-      <%= form.text_field :title, placeholder: "Enter title.." %>
     </div>
-
-    <div class="field">
-      <%= form.label :description %>
-      <br>
-      <%= form.text_area :description, placeholder: "Enter description.." %>
-    </div>
-
-    <div class="field", style="max-width: 13rem">
-      <%= form.label :meeting_date, "Date and time" %>
-      <br>
-      <%= form.datetime_field :meeting_date %>
-    </div>
-
-    <div class="field">
-      <%= form.label :location %>
-      <br>
-      <%= form.text_field :location, placeholder: "Enter location.." %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-
-  <% end %>
-  </div>
+    <% else %>
+      <center>
+      <h1>You're not an admin!</h1>
+      <%= link_to 'Back', meetings_path %>
+      </center>
+    <% end %>
