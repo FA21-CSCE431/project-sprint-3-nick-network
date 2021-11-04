@@ -52,8 +52,10 @@
               <hr><p class="card-text"><em><%= news_post.description %></em></p><hr>
 
               <%= link_to 'Show', news_post, :class => "btn btn-primary" %>
-              <%= link_to 'Edit', edit_news_post_path(news_post), :class => "btn btn-primary" %>
-              <%= link_to 'Delete', delete_news_post_path(news_post), :class => "btn btn-primary" %>
+              <% if current_user.uid == news_post.userID || current_user.uid == "110391296899575374577" %>
+                <%= link_to 'Edit', edit_news_post_path(news_post), :class => "btn btn-primary" %>
+                <%= link_to 'Delete', delete_news_post_path(news_post), :class => "btn btn-primary" %>
+              <% end %>
               <%= link_to 'Reply', news_post, :class => "btn btn-primary" %>
             </center></div>
           </div>
