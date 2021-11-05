@@ -16,12 +16,22 @@ ActiveRecord::Schema.define(version: 20_211_022_210_659) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
+<<<<<<< HEAD
   create_table 'comments', force: :cascade do |t|
     t.string 'name'
     t.string 'description'
     t.integer 'news_post_id'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
+=======
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "news_post_id"
+    t.string "userID"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+>>>>>>> add_news_posts
   end
 
   create_table 'events', force: :cascade do |t|

@@ -6,6 +6,7 @@ class Comments < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :description
       t.integer :news_post_id
+      t.string :userID
       t.timestamps
     end
   end

@@ -51,8 +51,10 @@
               <hr><p class="card-text"><em><%= comment.description %></em></p><hr>
 
               <%= link_to 'Show', comment, :class => "btn btn-primary" %>
-              <%= link_to 'Edit', edit_comment_path(comment), :class => "btn btn-primary" %>
-              <%= link_to 'Delete', delete_comment_path(comment), :class => "btn btn-primary" %>
+              <% if current_user.uid == comment.userID  || current_user.uid == "110391296899575374577" %>
+                <%= link_to 'Edit', edit_comment_path(comment), :class => "btn btn-primary" %>
+                <%= link_to 'Delete', delete_comment_path(comment), :class => "btn btn-primary" %>
+              <% end %>
               <%= link_to 'Reply', comment, :class => "btn btn-primary" %>
             </center></div>
           </div>
