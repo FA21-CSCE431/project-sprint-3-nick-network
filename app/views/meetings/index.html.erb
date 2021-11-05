@@ -47,7 +47,9 @@
 
 <h1>Meetings</h1>
 <div class="button-container">
-  <%= link_to '<button type="button">Add New meeting</button>'.html_safe, new_meeting_path %>
+  <% if current_user.uid == "110391296899575374577" %>
+    <%= link_to '<button type="button">Add New meeting</button>'.html_safe, new_meeting_path %>
+  <% end %>
 </div>
 <br>
 <div class="container">
@@ -83,8 +85,10 @@
 
               <div class="card-body">
                 <%= link_to 'View', meeting, :class => "btn btn-primary" %>
-                <%= link_to 'Edit', edit_meeting_path(meeting), :class => "btn btn-primary"%>
-                <%= link_to 'Destroy', delete_meeting_path(meeting), :class => "btn btn-primary"%>
+                <% if current_user.uid == "110391296899575374577" %>
+                  <%= link_to 'Edit', edit_meeting_path(meeting), :class => "btn btn-primary"%>
+                  <%= link_to 'Destroy', delete_meeting_path(meeting), :class => "btn btn-primary"%>
+                <% end %>
               </div>
             </div>
           </div>

@@ -72,7 +72,9 @@
           </div>
         </div>
         <div class="container", style="margin-left: 30em;">
-          <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_product_path(@product) %>
+          <% if current_user.uid == "110391296899575374577" %>
+            <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_product_path(@product) %>
+          <% end %>
           <%= link_to '<button type="button"> Back </button>'.html_safe, products_path %>
         </div>
 </div>
