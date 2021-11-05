@@ -10,7 +10,7 @@ RSpec.describe Comment, type: :model do
   end
 
   subject do
-    described_class.new(name: 'Nic', description: 'I love your dog!!', news_post_id: @news_post.id)
+    described_class.new(name: 'Nic', description: 'I love your dog!!', news_post_id: @news_post.id, userID: '6789')
   end
 
   it 'is valid with valid attributes' do
@@ -29,6 +29,11 @@ RSpec.describe Comment, type: :model do
 
   it 'is not valid without a corresponding news post (news_post_id)' do
     subject.news_post_id = nil
+    expect(subject).not_to be_valid
+  end
+
+  it 'is not valid without a userID' do
+    subject.userID = nil
     expect(subject).not_to be_valid
   end
 end

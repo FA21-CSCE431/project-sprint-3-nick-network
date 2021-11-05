@@ -82,15 +82,10 @@
 
 
                     <br>
-<<<<<<< HEAD
-                    <%= link_to 'Edit', edit_comment_path(comment), id: 1 %>
-                    <%= link_to 'Delete', delete_comment_path(comment), id: 2 %>
-=======
                     <% if current_user.uid == comment.userID  || current_user.uid == "110391296899575374577" %>
-                      <%= link_to 'Edit', edit_comment_path(comment)%>
-                      <%= link_to 'Delete', delete_comment_path(comment) %>
+                      <%= link_to 'Edit', edit_comment_path(comment), id: 1 %>
+                      <%= link_to 'Delete', delete_comment_path(comment), id: 2 %>
                       <% end %>
->>>>>>> add_news_posts
                   </td>
             </tr>
             <% end %>
