@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# location: spec/unit/unit_meetingspec.rb
+# location: spec/unit/unit_newsfeedpost_spec.rb
 require 'rails_helper'
 
 RSpec.describe NewsPost, type: :model do

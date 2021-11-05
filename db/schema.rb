@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,63 +12,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_210659) do
-
+ActiveRecord::Schema.define(version: 20_211_022_210_659) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "comments", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.integer "news_post_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'comments', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.integer 'news_post_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.datetime "date_time"
-    t.string "location"
-    t.string "add_req"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'events', force: :cascade do |t|
+    t.string 'title'
+    t.string 'description'
+    t.datetime 'date_time'
+    t.string 'location'
+    t.string 'add_req'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "meetings", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.date "meeting_date"
-    t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'meetings', force: :cascade do |t|
+    t.string 'title'
+    t.string 'description'
+    t.date 'meeting_date'
+    t.string 'location'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "news_posts", force: :cascade do |t|
-    t.string "name"
-    t.string "userID"
-    t.string "title"
-    t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'news_posts', force: :cascade do |t|
+    t.string 'name'
+    t.string 'userID'
+    t.string 'title'
+    t.string 'description'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.decimal "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'products', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.decimal 'price'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "full_name"
-    t.string "uid"
-    t.string "avatar_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.string 'email', null: false
+    t.string 'full_name'
+    t.string 'uid'
+    t.string 'avatar_url'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['email'], name: 'index_users_on_email', unique: true
   end
-
 end

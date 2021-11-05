@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# location: spec/feature/integration_eventspec.rb
+# location: spec/feature/integration_event_spec.rb
 require 'rails_helper'
 
 def login
