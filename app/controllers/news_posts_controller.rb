@@ -11,13 +11,7 @@ class NewsPostsController < ApplicationController
   end
 
   # GET /events/1 or /events/1.json
-<<<<<<< HEAD
-  def show
-    @news_post = NewsPost.find(params[:id])
-  end
-=======
   def show; end
->>>>>>> dev
 
   # GET /events/new
   def new
