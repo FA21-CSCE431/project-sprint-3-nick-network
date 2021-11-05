@@ -1,0 +1,31 @@
+<%= form_with(model: comment) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mx-auto" style="width: 300px; margin-left: auto; margin-right: auto;">
+    <div class="card" style="width: 300px; border: 3px solid black; margin-left: auto; margin-right: auto;">
+      <div class="card-body"><center>
+
+        Your name: <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %><br>
+        <% form.label :news_post_id %><%= form.hidden_field :news_post_id, value: params[:news_post] %>
+
+        <p><em><%= form.label :description %><br><%= form.text_area :description, :rows => 10 %></em></p>
+      </center></div>
+    </div>
+  </div>
+
+  <center>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </center>
+<% end %>

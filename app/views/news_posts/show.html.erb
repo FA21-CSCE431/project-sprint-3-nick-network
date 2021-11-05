@@ -22,6 +22,15 @@
       width: 8em;
     }
 
+    tr:nth-child(even) {
+      background-color: #ebf3ff;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dbeaff;
+    }
+
+
   </style>
 </head>
 
@@ -34,14 +43,63 @@
       <h5 class="card-author"> Posted by: <%= @news_post.name %></h5>
       <h5 class="card-post-date">Posted on: <%= @news_post.created_at.strftime("%m-%d-%Y") %></h5>
       <hr><p class="card-text"><em><%= @news_post.description %></em></p><hr>
+
       <% if current_user.uid == @news_post.userID  || current_user.uid == "110391296899575374577" %>
         <%= link_to 'Edit', edit_news_post_path(@news_post), :class => "btn btn-primary" %>
         <%= link_to 'Delete', delete_news_post_path(@news_post), :class => "btn btn-primary" %>
       <% end %>
       <%= link_to 'Reply', @news_post, :class => "btn btn-primary" %>
+
     </center></div>
   </div>
 </div>
+
+<br>
+
+<div class="mx-auto" style="width: 65%; margin-left: auto; margin-right: auto;">
+  <div class="card" style="width: 65%; border: 3px solid blue; margin-left: auto; margin-right: auto;">
+    <div class="card-body" style="padding: 2%">
+      <center>
+      <h3 class="card-title">Comments</h3>
+
+        <table class="table table-bordered border-primary">
+
+          <% if @news_post.comments.blank? %>
+            <%= "Be the first one to comment!" %>
+          <% end %>
+
+
+          <tbody>
+            <% for comment in @news_post.comments %>
+            <tr>
+              <td> <%= comment.description %> <br> <br>
+
+                    <%= "Posted by " + comment.name + ", on "%>
+                    <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+
+                    <% if comment.created_at != comment.updated_at %>
+                      <br> <%= "Edited on " + comment.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>
+                    <% end %>
+
+
+                    <br>
+                    <%= link_to 'Edit', edit_comment_path(comment)%>
+                    <%= link_to 'Delete', delete_comment_path(comment) %>
+                  </td>
+            </tr>
+            <% end %>
+
+          </tbody>
+        </table>
+        <div class="button">
+          <%= link_to 'Add New Comment', "/comments/new?news_post=#{@news_post.id}", :class => "btn btn-primary" %>
+        </div>
+    </center>
+  </div>
+  </div>
+</div>
+
+
 <center>
   <br><%= link_to 'Back', news_posts_path %>
 </center>

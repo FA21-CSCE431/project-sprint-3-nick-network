@@ -4,6 +4,7 @@ class NewsPostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_news_post, only: %i[show edit update destroy]
 
+
   # GET /events or /events.json
   def index
     @news_post = NewsPost.all
