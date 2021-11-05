@@ -48,7 +48,6 @@
         <%= link_to 'Edit', edit_news_post_path(@news_post), :class => "btn btn-primary" %>
         <%= link_to 'Delete', delete_news_post_path(@news_post), :class => "btn btn-primary" %>
       <% end %>
-      <%= link_to 'Reply', @news_post, :class => "btn btn-primary" %>
 
     </center></div>
   </div>
@@ -83,8 +82,10 @@
 
 
                     <br>
-                    <%= link_to 'Edit', edit_comment_path(comment)%>
-                    <%= link_to 'Delete', delete_comment_path(comment) %>
+                    <% if current_user.uid == comment.userID  || current_user.uid == "110391296899575374577" %>
+                      <%= link_to 'Edit', edit_comment_path(comment)%>
+                      <%= link_to 'Delete', delete_comment_path(comment) %>
+                      <% end %>
                   </td>
             </tr>
             <% end %>

@@ -760,6 +760,12 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -823,6 +829,12 @@
         "lines": [
           null,
           null,
+          1,
+          null
+        ]
+      },
+      "/Nick-Network/Nick-Network/app/helpers/comments_helper.rb": {
+        "lines": [
           1,
           null
         ]
@@ -1154,6 +1166,9 @@
           1,
           1,
           1,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -1433,6 +1448,7 @@
           1,
           null,
           null,
+          null,
           1,
           2,
           null,
@@ -1499,6 +1515,15 @@
           null,
           1,
           2,
+          null,
+          null
+        ]
+      },
+      "/Nick-Network/Nick-Network/app/models/comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -1583,6 +1608,6 @@
         ]
       }
     },
-    "timestamp": 1635963930
+    "timestamp": 1636143081
   }
 }
