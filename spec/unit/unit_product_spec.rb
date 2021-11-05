@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# location: spec/unit/unit_meetingspec.rb
+# location: spec/unit/unit_product_spec.rb
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
