@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Meeting < ApplicationRecord
+class Member < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :meeting_date, presence: true

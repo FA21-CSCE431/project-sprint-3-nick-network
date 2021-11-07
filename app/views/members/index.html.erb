@@ -45,13 +45,13 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Meetings</h1>
+<h1>Member</h1>
 <div class="button-container">
-  <%= link_to '<button type="button">Add New meeting</button>'.html_safe, new_meeting_path %>
+  <%= link_to '<button type="button">Add New Member</button>'.html_safe, new_member_path %>
 </div>
 <br>
 <div class="container">
-  <% @meetings.each do |meeting| %>
+  <% @members.each do |member| %>
         <div class="card mb-3" style="border: 3px solid black;">
           <div class="row g-0">
             <div class="col-md-3">
@@ -59,8 +59,8 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title", style="font-size: 19px;"> <%= meeting.title %> </h5>
-                <p class="card-text"> <%= meeting.description[0..189] %> </p>
+                <h5 class="card-title", style="font-size: 19px;"> <%= member.title %> </h5>
+                <p class="card-text"> <%= member.description[0..189] %> </p>
               </div>
 
               <table class="table table-sm">
@@ -72,19 +72,19 @@
                 <tbody>
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Time </th>
-                    <td> <%= meeting.meeting_date.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                    <td> <%= member.meeting_date.strftime("%m/%d/%Y at %I:%M%p") %> </td>
                   </tr>
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Location </th>
-                    <td> <%= meeting.location %> </td>
+                    <td> <%= member.location %> </td>
                   </tr>
                 </tbody>
               </table>
 
               <div class="card-body">
-                <%= link_to 'View', meeting, :class => "btn btn-primary" %>
-                <%= link_to 'Edit', edit_meeting_path(meeting), :class => "btn btn-primary"%>
-                <%= link_to 'Destroy', delete_meeting_path(meeting), :class => "btn btn-primary"%>
+                <%= link_to 'View', member, :class => "btn btn-primary" %>
+                <%= link_to 'Edit', edit_member_path(member), :class => "btn btn-primary"%>
+                <%= link_to 'Destroy', delete_member_path(member), :class => "btn btn-primary"%>
               </div>
             </div>
           </div>
