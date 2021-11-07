@@ -55,9 +55,9 @@
 
 
     <div class="field">
-      <%= form.label :title %>
+      <%= form.label :name %>
       <br>
-      <%= form.text_field :title, placeholder: "Enter title.." %>
+      <%= form.text_field :name, placeholder: "Enter name.." %>
     </div>
 
     <div class="field">
@@ -67,15 +67,33 @@
     </div>
 
     <div class="field", style="max-width: 13rem">
-      <%= form.label :meeting_date, "Date and time" %>
+      <%= form.label :birthday, "Birthday" %>
       <br>
-      <%= form.datetime_field :meeting_date %>
+      <%= form.date_field :birthday %>
     </div>
 
     <div class="field">
-      <%= form.label :location %>
+      <%= form.label :classification %>
       <br>
-      <%= form.text_field :location, placeholder: "Enter location.." %>
+      <%= form.text_field :classification, placeholder: "Enter Classification.." %>
+    </div>
+
+    <div class="field">
+    <%= form.label :major %>
+    <br>
+    <%= form.text_field :major, placeholder: "Major.." %>
+    </div>
+
+    <div class="field">
+    <%= form.label :email %>
+    <br>
+    <%= form.text_field :email, placeholder: "Enter Email.." %>
+    </div>
+
+    <div class="field">
+    <%= form.label :phone %>
+    <br>
+    <%= form.text_field :phone, placeholder: "Enter Phone.." %>
     </div>
 
     <div class="actions">

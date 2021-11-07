@@ -34,13 +34,13 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1> Deleting <%= @member.title %> </h1>
+<h1> Deleting <%= @member.name %> </h1>
 
 <div class="del-meeting">
   <%= form_for(@member, :method => 'delete') do |f| %>
 
     <p>Are you sure you want to permanently delete this member?</p>
-    <p><%= @member.title %></p>
+    <p><%= @member.name %></p>
 
     <div class="form-buttons">
       <%= f.submit("Delete member") %>
@@ -71,13 +71,34 @@
 
                 <tbody>
                   <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Time </th>
-                    <td> <%= @member.meeting_date.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Birthday </th>
+                    <td> <%= @member.birthday.strftime("%m/%d/%Y") %> </td>
                   </tr>
                   <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Location </th>
-                    <td> <%= @member.location %> </td>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Description </th>
+                    <td> <%= @member.description %> </td>
                   </tr>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Classification </th>
+                    <td> <%= @member.classification %> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Major </th>
+                    <td> <%= @member.major %> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> email </th>
+                    <td> <%= @member.email %> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> phone </th>
+                    <td> <%= @member.phone %> </td>
+                  </tr>
+
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Created on </th>
                     <td> <%= @member.created_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>

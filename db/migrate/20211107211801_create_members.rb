@@ -1,10 +1,13 @@
 class CreateMembers < ActiveRecord::Migration[6.1]
   def change
     create_table :members do |t|
-      t.string :title
+      t.string :name
       t.string :description
-      t.date :meeting_date
-      t.string :location
+      t.date :birthday
+      t.string :classification
+      t.string :major
+      t.string :email
+      t.string :phone
 
       t.timestamps
     end

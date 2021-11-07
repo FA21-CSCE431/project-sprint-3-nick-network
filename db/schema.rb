@@ -35,10 +35,13 @@ ActiveRecord::Schema.define(version: 2021_11_07_211801) do
   end
 
   create_table "members", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.string "description"
-    t.date "meeting_date"
-    t.string "location"
+    t.date "birthday"
+    t.string "classification"
+    t.string "major"
+    t.string "email"
+    t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

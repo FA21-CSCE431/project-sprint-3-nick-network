@@ -31,7 +31,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1> <%= @member.title %> </h1>
+<h1> <%= @member.name %> </h1>
 <div class="container">
         <div class="card mb-3">
           <div class="row g-0">
@@ -51,13 +51,30 @@
 
                 <tbody>
                   <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Time </th>
-                    <td> <%= @member.meeting_date.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Birthday </th>
+                    <td> <%= @member.birthday.strftime("%m/%d/%Y") %> </td>
                   </tr>
+
                   <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Location </th>
-                    <td> <%= @member.location %> </td>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Classification </th>
+                  <td> <%= @member.classification %> </td>
                   </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Major </th>
+                  <td> <%= @member.major %> </td>
+                  </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Email </th>
+                  <td> <%= @member.email %> </td>
+                  </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Phone </th>
+                  <td> <%= @member.phone %> </td>
+                  </tr>
+
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Created on </th>
                     <td> <%= @member.created_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
