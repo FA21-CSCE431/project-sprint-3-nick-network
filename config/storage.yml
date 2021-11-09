@@ -8,11 +8,10 @@ local:
 
 amazon_dev:
   service: S3
-  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
-  secret_access_key:
-    <%= Rails.application.credentials.aws[:secret_access_key] %>
-  region: <%= Rails.application.credentials.aws[:region] %>
-  bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
+  access_key_id: AKIA54AUNODAMCM3LZXZ
+  secret_access_key: 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
+  region: us-east-1
+  bucket: nick-network-dev
 
 amazon_prod:
   service: S3
