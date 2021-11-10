@@ -55,9 +55,7 @@
 
 
     <div class="field">
-      <%= form.label :name %>
-      <br>
-      <%= form.text_field :name, placeholder: "Enter name.." %>
+      Your name: <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %>
     </div>
 
     <div class="field">
