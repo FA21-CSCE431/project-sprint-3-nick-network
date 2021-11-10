@@ -13,6 +13,13 @@ amazon_dev:
   region: us-east-1
   bucket: nick-network-dev
 
+amazon_prod:
+  service: S3
+  access_key_id: AKIA54AUNODAMCM3LZXZ
+  secret_access_key: 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
+  region: us-east-1
+  bucket: nick-network-dev
+
 # amazon_dev:
 #   service: S3
 #   access_key_id:  <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
