@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :products
   resources :meetings
   resources :news_posts
+  resources :comments
   get 'about_us/Index'
   resources :events
   resources :events do
@@ -18,6 +19,11 @@ Rails.application.routes.draw do
     end
   end
   resources :news_posts do
+    member do
+      get :delete
+    end
+  end
+  resources :comments do
     member do
       get :delete
     end
