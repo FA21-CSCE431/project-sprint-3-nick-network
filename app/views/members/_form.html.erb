@@ -55,7 +55,7 @@
 
 
     <div class="field">
-      Your name: <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %>
+      <b>Your name:</b> <%= form.label :name, current_user.full_name %><%= form.hidden_field :name, value: current_user.full_name %>
     </div>
 
     <div class="field">
@@ -83,9 +83,7 @@
     </div>
 
     <div class="field">
-    <%= form.label :email %>
-    <br>
-    <%= form.text_field :email, placeholder: "Enter Email.." %>
+    <b>Email:</b> <%= form.label :email, current_user.email %><%= form.hidden_field :email, value: current_user.email %>
     </div>
 
     <div class="field">
