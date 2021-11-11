@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @gallery.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @gallery.description %>
+</p>
+
+<%= image_tag(@gallery.photo, width: 1000) if @gallery.photo.attached? %>
+
+<%= link_to 'Edit', edit_gallery_path(@gallery) %>
+<%= link_to 'Destroy', delete_gallery_path(@gallery) %> 
+<%= link_to 'Back', galleries_path %>

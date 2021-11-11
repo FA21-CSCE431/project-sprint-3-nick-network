@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2021_11_05_024802) do
-=======
-ActiveRecord::Schema.define(version: 2021_10_22_210659) do
->>>>>>> dev
+ActiveRecord::Schema.define(version: 2021_11_10_015308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -46,7 +41,8 @@ ActiveRecord::Schema.define(version: 2021_10_22_210659) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-=======
+  end
+
   create_table "comments", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -54,7 +50,6 @@ ActiveRecord::Schema.define(version: 2021_10_22_210659) do
     t.string "userID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
->>>>>>> dev
   end
 
   create_table "events", force: :cascade do |t|
@@ -65,6 +60,13 @@ ActiveRecord::Schema.define(version: 2021_10_22_210659) do
     t.string "add_req"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "galleries", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "meetings", force: :cascade do |t|
