@@ -1,0 +1,95 @@
+<head>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .css_img {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 65em;
+      margin: 0 auto;
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+
+ </style>
+</head>
+
+<p id="notice"><%= notice %></p>
+
+<h1> <%= @member.name %> </h1>
+<div class="container">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="card-text"> <%= @member.description %> </p>
+              </div>
+
+              <table class="table table-sm">
+                <colgroup>
+                  <col span="1" style="width: 28%;">
+                  <col span="1" style="width: 72%;">
+                </colgroup>
+
+                <tbody>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Birthday </th>
+                    <td> <%= @member.birthday.strftime("%m/%d/%Y") %> </td>
+                  </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Classification </th>
+                  <td> <%= @member.classification %> </td>
+                  </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Major </th>
+                  <td> <%= @member.major %> </td>
+                  </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Email </th>
+                  <td> <%= @member.email %> </td>
+                  </tr>
+
+                  <tr>
+                  <th scope="row", style="font-weight: normal; color: gray;"> Phone </th>
+                  <td> <%= @member.phone %> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Created on </th>
+                    <td> <%= @member.created_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Last updated on </th>
+                    <td> <%= @member.updated_at.strftime("%m/%d/%Y at %I:%M%p") %> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="container", style="margin-left: 30em;">
+          <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_member_path(@member) %>
+          <%= link_to '<button type="button"> Back </button>'.html_safe, members_path %>
+        </div>
+</div>

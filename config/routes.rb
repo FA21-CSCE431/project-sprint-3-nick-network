@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :comments
   get 'about_us/Index'
   resources :events
+  resources :members
+
   resources :events do
     member do
       get :delete
@@ -40,6 +42,11 @@ Rails.application.routes.draw do
     end
   end
   resources :products do
+    member do
+      get :delete
+    end
+  end
+  resources :members do
     member do
       get :delete
     end

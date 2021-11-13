@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Nick-Network/spec/feature/integration_comment_spec.rb": {
+=======
+      "/Nick-Network/spec/feature/integration_member_spec.rb": {
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
         "lines": [
           null,
           null,
@@ -9,20 +13,11 @@
           1,
           null,
           1,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           1,
           1,
@@ -36,6 +31,51 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+<<<<<<< HEAD
+=======
+          1,
+          null,
+          1,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+<<<<<<< HEAD
+=======
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+<<<<<<< HEAD
+=======
+          1,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
           null,
           null
         ]
@@ -746,6 +786,13 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -795,9 +842,15 @@
           1,
           null,
           1,
+<<<<<<< HEAD
           6,
           null,
           6,
+=======
+          1,
+          null,
+          1,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
           null,
           null
         ]
@@ -883,6 +936,7 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Nick-Network/spec/feature/integration_event_spec.rb": {
         "lines": [
           null,
@@ -1063,62 +1117,68 @@
           1,
           1,
           null,
-          null
-        ]
-      },
-      "/Nick-Network/spec/feature/integration_product_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          6,
-          6,
-          6,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Nick-Network/spec/models/user_spec.rb": {
+=======
+      "/Nick-Network/app/controllers/landing_controller.rb": {
         "lines": [
           null,
           null,
           1,
+          1,
+          null
+        ]
+      },
+      "/Nick-Network/app/controllers/application_controller.rb": {
+        "lines": [
           null,
+          null,
+          1,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
+          null
+        ]
+      },
+      "/Nick-Network/app/controllers/users/omniauth_callbacks_controller.rb": {
+        "lines": [
+          null,
+          null,
+<<<<<<< HEAD
+          null,
+          1,
+          null,
+          1,
+          6,
+          6,
+          6,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+=======
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+<<<<<<< HEAD
           1,
           null,
           null
@@ -1184,45 +1244,42 @@
       },
       "/Nick-Network/spec/unit/unit_event_spec.rb": {
         "lines": [
+=======
+          1,
+          0,
           null,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
+          null,
+          1,
+          1,
           null,
           null,
           1,
           null,
           1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           4,
           null,
           null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
           null
         ]
       },
-      "/Nick-Network/app/models/event.rb": {
+      "/Nick-Network/app/controllers/members_controller.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           1,
+<<<<<<< HEAD
           1,
           1,
           1,
@@ -1274,96 +1331,63 @@
       },
       "/Nick-Network/spec/unit/unit_meeting_spec.rb": {
         "lines": [
+=======
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
           null,
           null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          4,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Nick-Network/app/models/meeting.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Nick-Network/spec/unit/unit_newsfeedpost_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
           1,
           5,
           null,
           null,
           null,
           1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
           1,
           null,
           null,
           1,
           1,
+          null,
           1,
+          1,
+          2,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           1,
           1,
           1,
+          2,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
           null,
           null,
           1,
           1,
-          1,
           null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Nick-Network/app/models/news_post.rb": {
-        "lines": [
           null,
           null,
           1,
           1,
           1,
+<<<<<<< HEAD
           1,
           1,
           null,
@@ -1376,35 +1400,28 @@
           null,
           null,
           null,
-          1,
-          null,
-          1,
-          1,
-          4,
-          null,
-          null,
-          1,
+=======
+          2,
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
           1,
           null,
           null,
-          1,
-          1,
+          null,
           1,
           null,
           null,
           1,
-          1,
-          1,
+          5,
           null,
           null,
+          null,
           1,
-          1,
-          1,
+          2,
           null,
           null
         ]
       },
-      "/Nick-Network/app/models/product.rb": {
+      "/Nick-Network/app/models/member.rb": {
         "lines": [
           null,
           null,
@@ -1412,15 +1429,9 @@
           1,
           1,
           1,
-          null
-        ]
-      },
-      "/Nick-Network/app/controllers/landing_controller.rb": {
-        "lines": [
-          null,
-          null,
           1,
           1,
+<<<<<<< HEAD
           null
         ]
       },
@@ -1454,11 +1465,11 @@
           null,
           1,
           null,
+=======
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
           1,
-          0,
-          null,
-          null,
           1,
+<<<<<<< HEAD
           6,
           null,
           null,
@@ -1951,10 +1962,16 @@
           1,
           2,
           null,
+=======
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
           null
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1636824647
+=======
+    "timestamp": 1636773870
+>>>>>>> ada55257f7fa8b15783a4a55a64bd394265bb215
   }
 }
