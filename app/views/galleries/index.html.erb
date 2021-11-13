@@ -46,7 +46,12 @@
 <div class="row">
   <% @galleries.each do |gallery| %>
     <div class="column">
-      <%= image_tag(gallery.photo, width: 1000) if gallery.photo.attached? %>
+
+      <% if gallery.photo.attached? %>
+        <%= image_tag(gallery.photo, width: 1000) %>
+      <% else %>
+        <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+      <% end %>
       <td><%= link_to 'Show', gallery %></td>
       <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
       <td><%= link_to 'Destroy', delete_gallery_path(gallery) %></td>

@@ -1,1 +1,3 @@
-json.partial! "galleries/gallery", gallery: @gallery
+# frozen_string_literal: true
+
+json.partial! 'galleries/gallery', gallery: @gallery

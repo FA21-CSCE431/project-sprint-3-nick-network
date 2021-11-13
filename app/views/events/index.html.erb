@@ -54,7 +54,11 @@
         <div class="card mb-3" style="border: 3px solid black;">
           <div class="row g-0">
             <div class="col-md-4">
-            <%= image_tag(event.photo, width: 200) if event.photo.attached? %>
+              <% if event.photo.attached? %>
+                <%= image_tag(event.photo, width: 200) %>
+              <% else %>
+                <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+              <% end %>
             </div>
             <div class="col-md-8">
               <div class="card-body">

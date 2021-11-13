@@ -4,16 +4,8 @@
 require 'rails_helper'
 
 RSpec.describe Gallery, type: :model do
-
   subject do
     described_class.new(title: 'Nic', description: 'I love your dog!!')
-    described_class.image.attach(
-      io: File.open('/assets/Default.jpg'),
-       filename: 'Default.jpg')
-  end
-
-  it 'is valid with valid attributes' do
-    expect(subject.photo.attached?).to be_valid
   end
 
   it 'is valid with valid attributes' do
@@ -21,7 +13,7 @@ RSpec.describe Gallery, type: :model do
   end
 
   it 'is not valid without an user name' do
-    subject.name = nil
+    subject.title = nil
     expect(subject).not_to be_valid
   end
 
@@ -29,5 +21,4 @@ RSpec.describe Gallery, type: :model do
     subject.description = nil
     expect(subject).not_to be_valid
   end
-
 end

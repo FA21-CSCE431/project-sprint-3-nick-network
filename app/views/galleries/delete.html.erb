@@ -40,14 +40,18 @@
   <div class="del-event">
     <%= form_for(@gallery, :method => 'delete') do |f| %>
 
-      <%= image_tag(@gallery.photo, width: 1000) if @gallery.photo.attached? %>
+    <% if @gallery.photo.attached? %>
+      <%= image_tag(@gallery.photo, width: 1000) %>
+    <% else %>
+      <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+    <% end %>
 
 
       <p>Are you sure you want to permanently delete this image?</p>
       <p><%= @gallery.title %></p>
 
       <div class="form-buttons">
-        <%= f.submit("Delete Event") %>
+        <%= f.submit("Delete Post") %>
         <%= link_to '<button type="button"> Back </button>'.html_safe, galleries_path %>
       </div>
 

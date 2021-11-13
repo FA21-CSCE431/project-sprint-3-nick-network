@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class GalleriesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_gallery, only: %i[ show edit update destroy ]
+  before_action :set_gallery, only: %i[show edit update destroy]
 
   # GET /galleries or /galleries.json
   def index
@@ -8,8 +10,7 @@ class GalleriesController < ApplicationController
   end
 
   # GET /galleries/1 or /galleries/1.json
-  def show
-  end
+  def show; end
 
   # GET /galleries/new
   def new
@@ -17,8 +18,7 @@ class GalleriesController < ApplicationController
   end
 
   # GET /galleries/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /galleries or /galleries.json
   def create
@@ -26,7 +26,7 @@ class GalleriesController < ApplicationController
 
     respond_to do |format|
       if @gallery.save
-        format.html { redirect_to @gallery, notice: "Gallery was successfully created." }
+        format.html { redirect_to @gallery, notice: 'Gallery was successfully created.' }
         format.json { render :show, status: :created, location: @gallery }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class GalleriesController < ApplicationController
   def update
     respond_to do |format|
       if @gallery.update(gallery_params)
-        format.html { redirect_to @gallery, notice: "Gallery was successfully updated." }
+        format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
         format.json { render :show, status: :ok, location: @gallery }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -56,19 +56,20 @@ class GalleriesController < ApplicationController
   def destroy
     @gallery.destroy
     respond_to do |format|
-      format.html { redirect_to galleries_url, notice: "Gallery was successfully destroyed." }
+      format.html { redirect_to galleries_url, notice: 'Gallery was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gallery
-      @gallery = Gallery.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def gallery_params
-      params.require(:gallery).permit(:title, :description, :photo)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gallery
+    @gallery = Gallery.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def gallery_params
+    params.require(:gallery).permit(:title, :description, :photo)
+  end
 end
