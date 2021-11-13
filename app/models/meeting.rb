@@ -5,4 +5,7 @@ class Meeting < ApplicationRecord
   validates :description, presence: true
   validates :meeting_date, presence: true
   validates :location, presence: true
+  has_one_attached :photo
+
+  validates :photo, attached: false, content_type: ['image/png', 'image/jpg', 'image/jpeg']
 end
