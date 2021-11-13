@@ -38,23 +38,30 @@
   }
   </style>
 </head>
+<center>
+  <h1>Gallery</h1>
 
-<div class="button-container">
-  <%= link_to '<button type="button">Add New Image</button>'.html_safe, new_gallery_path %>
-</div>
+  <div class="button-container">
+    <% if current_user.uid == "110391296899575374577" %>
+      <%= link_to '<button type="button">Add New Image</button>'.html_safe, new_gallery_path %>
+    <% end %>
+  </div>
 
-<div class="row">
-  <% @galleries.each do |gallery| %>
-    <div class="column">
+  <div class="row">
+    <% @galleries.each do |gallery| %>
+      <div class="column">
 
-      <% if gallery.photo.attached? %>
-        <%= image_tag(gallery.photo, width: 1000) %>
-      <% else %>
-        <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
-      <% end %>
-      <td><%= link_to 'Show', gallery %></td>
-      <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
-      <td><%= link_to 'Destroy', delete_gallery_path(gallery) %></td>
-    </div>
-  <% end %>
-</div>
+        <% if gallery.photo.attached? %>
+          <%= image_tag(gallery.photo, width: 1000) %>
+        <% else %>
+          <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+        <% end %>
+        <td><%= link_to 'Show', gallery %></td>
+        <% if current_user.uid == "110391296899575374577" %>
+          <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
+          <td><%= link_to 'Destroy', delete_gallery_path(gallery) %></td>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</center>

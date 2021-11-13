@@ -1,6 +1,15 @@
-<h1>Editing Gallery</h1>
+<% if current_user.uid == "110391296899575374577" %>
+  <center>
+    <h1>Editing Gallery</h1>
 
-<%= render 'form', gallery: @gallery %>
+    <%= render 'form', gallery: @gallery %>
 
-<%= link_to 'Show', @gallery %> |
-<%= link_to 'Back', galleries_path %>
+    <%= link_to 'Show', @gallery %> |
+    <%= link_to 'Back', galleries_path %>
+  </center>
+<% else %>
+  <center>
+  <h1>You're not an admin!</h1>
+  <%= link_to 'Back', galleries_path %>
+  </center>
+<% end %>

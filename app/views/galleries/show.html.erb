@@ -1,21 +1,57 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <style>
 
-<p>
-  <strong>Title:</strong>
-  <%= @gallery.title %>
-</p>
+    h1 {
+      text-align: center;
+    }
 
-<p>
-  <strong>Description:</strong>
-  <%= @gallery.description %>
-</p>
+    .card {
+      text-align: center;
+    }
 
-<% if @gallery.photo.attached? %>
-  <%= image_tag(@gallery.photo, width: 1000) %>
-<% else %>
-  <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
-<% end %>
+    .css_img {
+      width: 100%;
+    }
 
-<%= link_to 'Edit', edit_gallery_path(@gallery) %>
-<%= link_to 'Destroy', delete_gallery_path(@gallery) %>
+    .container {
+      max-width: 65em;
+      margin: 0 auto;
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+
+ </style>
+</head>
+<center>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>
+      <%= @gallery.title %>
+    </strong>
+  </p>
+
+  <p>
+    <%= @gallery.description %>
+  </p>
+
+  <% if @gallery.photo.attached? %>
+    <%= image_tag(@gallery.photo, width: 1000) %>
+  <% else %>
+    <div class="card mb-3" style="border: 3px solid black;">
+    <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+    </div>
+  <% end %>
+  <% if current_user.uid == "110391296899575374577" %>
+    <%= link_to 'Edit', edit_gallery_path(@gallery) %>
+    <%= link_to 'Destroy', delete_gallery_path(@gallery) %>
+  <% end %>
+<br>
 <%= link_to 'Back', galleries_path %>
+</center>
