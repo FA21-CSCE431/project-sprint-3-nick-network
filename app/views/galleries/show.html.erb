@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @gallery.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @gallery.description %>
+</p>
+
+<% if @gallery.photo.attached? %>
+  <%= image_tag(@gallery.photo, width: 1000) %>
+<% else %>
+  <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+<% end %>
+
+<%= link_to 'Edit', edit_gallery_path(@gallery) %>
+<%= link_to 'Destroy', delete_gallery_path(@gallery) %>
+<%= link_to 'Back', galleries_path %>
