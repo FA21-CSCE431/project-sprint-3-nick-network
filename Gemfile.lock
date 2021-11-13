@@ -106,6 +106,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
     docile (1.4.0)
+    down (5.2.4)
+      addressable (~> 2.8)
     erubi (1.10.0)
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
@@ -313,6 +315,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  down (~> 5.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   omniauth (~> 1.9.1)
