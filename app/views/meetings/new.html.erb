@@ -1,7 +1,14 @@
-<h1>New Meeting</h1>
+<% if current_user.uid == "110391296899575374577" %>
+  <h1>New Meeting</h1>
 
-<%= render 'form', meeting: @meeting %>
+  <%= render 'form', meeting: @meeting %>
 
-<div class="container", style="margin-left: 10em;">
-  <%= link_to '<button type="button"> Back </button>'.html_safe, meetings_path %>
-</div>
+  <center>
+    <%= link_to '<button type="button"> Back </button>'.html_safe, meetings_path %>
+  </center>
+<% else %>
+  <center>
+  <h1>You're not an admin!</h1>
+  <%= link_to 'Back', meetings_path %>
+  </center>
+<% end %>

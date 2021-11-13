@@ -84,9 +84,10 @@
 
     <% end %>
     </div>
-    <% else %>
-      <center>
-      <h1>You're not an admin!</h1>
-      <%= link_to 'Back', meetings_path %>
-      </center>
-    <% end %>
+  </div>
+<% else %>
+  <center>
+  <h1>You're not an admin!</h1>
+  <%= link_to 'Back', meetings_path %>
+  </center>
+<% end %>
