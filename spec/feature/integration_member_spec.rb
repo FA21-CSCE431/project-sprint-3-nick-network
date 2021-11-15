@@ -22,7 +22,8 @@ RSpec.describe 'Creating, editing, and destroying Member', type: :feature do
     fill_in 'Phone', with: '666-666-666'
     click_on 'Create Member'
     visit members_path
-    # expect(page).to have_content('Nick')
+    click_on 'View'
+    #expect(page).to have_content('Nick')
     expect(page).to have_content('Howdy my name is Nick!')
     expect(page).to have_content('10/24/2021')
     expect(page).to have_content('Senior')
@@ -41,7 +42,8 @@ RSpec.describe 'Creating, editing, and destroying Member', type: :feature do
     fill_in 'Phone', with: '420-420-420'
     click_on 'Update Member'
     visit members_path
-    # expect(page).to have_content('NicAlyssa')
+    click_on 'View'
+    #expect(page).to have_content('NicAlyssa')
     expect(page).to have_content('Updated desciption yall!')
     expect(page).to have_content('11/04/2019')
     expect(page).to have_content('Sophomore')

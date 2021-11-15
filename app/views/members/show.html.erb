@@ -52,7 +52,11 @@
                 <tbody>
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Birthday </th>
-                    <td> <%= @member.birthday.strftime("%m/%d/%Y") %> </td>
+                    <td>
+                    <% if @member.birthday%>
+                      <%= @member.birthday.strftime("%m/%d/%Y") %>
+                    <% end %>
+                    </td>
                   </tr>
 
                   <tr>
@@ -89,7 +93,10 @@
           </div>
         </div>
         <div class="container", style="margin-left: 30em;">
-          <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_member_path(@member) %>
+          <% if current_user.email == @member.email || current_user.uid == "110391296899575374577" %>
+            <%= link_to '<button type="button"> Edit </button>'.html_safe, edit_member_path(@member) %>
+            <%= link_to '<button type="button"> Delete </button>'.html_safe, delete_member_path(@member) %>
+          <% end %>
           <%= link_to '<button type="button"> Back </button>'.html_safe, members_path %>
         </div>
 </div>
