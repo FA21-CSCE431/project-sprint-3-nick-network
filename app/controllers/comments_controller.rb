@@ -26,7 +26,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to "/news_posts/#{@comment.news_post_id}".html_safe, notice: 'Comment was successfully created.' }
+        format.html do
+          redirect_to "/news_posts/#{@comment.news_post_id}".html_safe, notice: 'Comment was successfully created.'
+        end
         format.json { render :show, status: :created, location: @comment }
       else
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -39,7 +41,9 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to "/news_posts/#{@comment.news_post_id}".html_safe, notice: 'Comment was successfully updated.' }
+        format.html do
+          redirect_to "/news_posts/#{@comment.news_post_id}".html_safe, notice: 'Comment was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit, status: :unprocessable_entity }
