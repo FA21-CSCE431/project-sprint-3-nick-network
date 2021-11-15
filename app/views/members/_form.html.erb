@@ -37,64 +37,126 @@
 
   </style>
 </head>
+<% if current_user.uid == "110391296899575374577" && !(member.name.blank?) %>
+  <div class="bigger-container">
+    <div class="container">
+    <%= form_with(model: @member) do |form| %>
+      <% if @member.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
 
-<div class="bigger-container">
-  <div class="container">
-  <%= form_with(model: @member) do |form| %>
-    <% if @member.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+          <ul>
+            <% member.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-        <ul>
-          <% member.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
+
+      <div class="field">
+        <b>Your name:</b> <%= form.label :name, member.name %><%= form.text_field :name, value: member.name %>
       </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <br>
+        <%= form.text_area :description, placeholder: "Enter description.." %>
+      </div>
+
+      <div class="field">
+        <%= form.label :birthday, "Birthday" %>
+        <br>
+        <%= form.date_field :birthday %>
+      </div>
+
+      <div class="field">
+        <%= form.label :classification %>
+        <br>
+        <%= form.text_field :classification, placeholder: "Enter Classification.." %>
+      </div>
+
+      <div class="field">
+      <%= form.label :major %>
+      <br>
+      <%= form.text_field :major, placeholder: "Major.." %>
+      </div>
+
+      <div class="field">
+      <b>Email:</b> <%= form.label :email, member.email %><%= form.hidden_field :email, value: member.email %>
+      </div>
+
+      <div class="field">
+      <%= form.label :phone %>
+      <br>
+      <%= form.number_field :phone, placeholder: "Enter Phone.." %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
     <% end %>
-
-
-    <div class="field">
-      <b>Your name:</b> <%= form.label :name, current_user.full_name %><%= form.text_field :name, value: current_user.full_name %>
-    </div>
-
-    <div class="field">
-      <%= form.label :description %>
-      <br>
-      <%= form.text_area :description, placeholder: "Enter description.." %>
-    </div>
-
-    <div class="field", style="max-width: 13rem">
-      <%= form.label :birthday, "Birthday" %>
-      <br>
-      <%= form.date_field :birthday %>
-    </div>
-
-    <div class="field">
-      <%= form.label :classification %>
-      <br>
-      <%= form.text_field :classification, placeholder: "Enter Classification.." %>
-    </div>
-
-    <div class="field">
-    <%= form.label :major %>
-    <br>
-    <%= form.text_field :major, placeholder: "Major.." %>
-    </div>
-
-    <div class="field">
-    <b>Email:</b> <%= form.label :email, current_user.email %><%= form.hidden_field :email, value: current_user.email %>
-    </div>
-
-    <div class="field">
-    <%= form.label :phone %>
-    <br>
-    <%= form.number_field :phone, placeholder: "Enter Phone.." %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-
-  <% end %>
   </div>
+<% else %>
+  <div class="bigger-container">
+    <div class="container">
+    <%= form_with(model: @member) do |form| %>
+      <% if @member.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+          <ul>
+            <% member.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <div class="field">
+        <b>Your name:</b> <%= form.label :name, current_user.full_name %><%= form.text_field :name, value: current_user.full_name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <br>
+        <%= form.text_area :description, placeholder: "Enter description.." %>
+      </div>
+
+      <div class="field">
+        <%= form.label :birthday, "Birthday" %>
+        <br>
+        <%= form.date_field :birthday %>
+      </div>
+
+      <div class="field">
+        <%= form.label :classification %>
+        <br>
+        <%= form.text_field :classification, placeholder: "Enter Classification.." %>
+      </div>
+
+      <div class="field">
+      <%= form.label :major %>
+      <br>
+      <%= form.text_field :major, placeholder: "Major.." %>
+      </div>
+
+      <div class="field">
+      <b>Email:</b> <%= form.label :email, current_user.email %><%= form.hidden_field :email, value: current_user.email %>
+      </div>
+
+      <div class="field">
+      <%= form.label :phone %>
+      <br>
+      <%= form.number_field :phone, placeholder: "Enter Phone.." %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
+    <% end %>
+  </div>
+<% end %>

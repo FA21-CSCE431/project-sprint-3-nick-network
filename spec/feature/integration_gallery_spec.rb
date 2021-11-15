@@ -2,7 +2,7 @@
 
 # location: spec/feature/integration_gallery_spec.rb
 require 'rails_helper'
-require "down"
+require 'down'
 
 def login
   Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google]
@@ -16,7 +16,7 @@ RSpec.describe 'Creating, editing, and destroying a gallery post', type: :featur
     visit new_gallery_path
     fill_in 'Title', with: 'Nick Day' # create a gallery post
     fill_in 'Description', with: 'Photos from the day'
-    Down.download("https:\/\/nick-network.s3.us-east-2.amazonaws.com\/Default.jpg", destination: "app/assets/images")
+    Down.download("https:\/\/nick-network.s3.us-east-2.amazonaws.com\/Default.jpg", destination: 'app/assets/images')
     find(:css, '#gallery_photo').set(File.join("#{Rails.root}/app/assets/images", 'Default.jpg'))
     click_on 'Create Gallery'
     expect(page).to have_content('Nick Day')
