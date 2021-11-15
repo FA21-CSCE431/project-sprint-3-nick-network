@@ -22,22 +22,22 @@ RSpec.describe Member, type: :model do
 
   it 'is not valid without a description' do
     subject.description = nil
-    expect(subject).not_to be_valid
+    expect(subject).to be_valid
   end
 
   it 'is not valid without a birthday' do
     subject.birthday = nil
-    expect(subject).not_to be_valid
+    expect(subject).to be_valid
   end
 
   it 'is not valid without a classification' do
     subject.classification = nil
-    expect(subject).not_to be_valid
+    expect(subject).to be_valid
   end
 
   it 'is not valid without a major' do
     subject.major = nil
-    expect(subject).not_to be_valid
+    expect(subject).to be_valid
   end
 
   it 'is not valid without a email' do
@@ -47,6 +47,6 @@ RSpec.describe Member, type: :model do
 
   it 'is not valid without a phone' do
     subject.phone = nil
-    expect(subject).not_to be_valid
+    expect(subject).to be_valid
   end
 end
