@@ -46,9 +46,21 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Member</h1>
+
+
 <div class="button-container">
-  <%= link_to '<button type="button">Add New Member</button>'.html_safe, new_member_path %>
+  <% member_exist = false %>
+  <% @members.each do |member| %>
+    <% if current_user.email == member.email %>
+      <% member_exist = true %>
+    <% end %>
+  <% end %>
+  <% if !member_exist %>
+    <%= link_to '<button type="button">Add New Member</button>'.html_safe, new_member_path %>
+  <% end %>
 </div>
+
+
 <br>
 <div class="container">
   <% @members.each do |member| %>
@@ -60,7 +72,6 @@
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title", style="font-size: 19px;"> <%= member.name %> </h5>
-                <p class="card-text"> <%= member.description[0..189] %> </p>
               </div>
 
               <table class="table table-sm">
@@ -68,12 +79,6 @@
                   <col span="1" style="width: 15%;">
                   <col span="1" style="width: 70%;">
                 </colgroup>
-
-                <tbody>
-                  <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Birthday </th>
-                    <td> <%= member.birthday.strftime("%m/%d/%Y") %> </td>
-                  </tr>
 
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Classification </th>
@@ -83,16 +88,6 @@
                   <tr>
                     <th scope="row", style="font-weight: normal; color: gray;"> Major </th>
                     <td> <%= member.major %> </td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Email </th>
-                    <td> <%= member.email %> </td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row", style="font-weight: normal; color: gray;"> Phone </th>
-                    <td> <%= member.phone %> </td>
                   </tr>
 
                 </tbody>
