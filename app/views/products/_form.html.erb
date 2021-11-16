@@ -38,43 +38,54 @@
   </style>
 </head>
 
-<div class="bigger-container">
-  <div class="container">
-  <%= form_with(model: product) do |form| %>
-    <% if product.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<% if current_user.uid == "110391296899575374577" %>
+  <div class="bigger-container">
+    <div class="container">
+    <%= form_with(model: product) do |form| %>
+      <% if product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-        <ul>
-          <% product.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
+          <ul>
+            <% product.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <div class="field">
+        <%= form.label :name %>
+        <br>
+        <%= form.text_field :name, placeholder: "Enter Product Name" %>
       </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <br>
+        <%= form.text_area :description, placeholder: "Enter Product Description.." %>
+      </div>
+
+      <div class="field", style="max-width: 13rem">
+        <%= form.label :price, "Enter Product Cost" %>
+        <br>
+        <%= form.text_field :price %>
+      </div>
+
+      <div class="field">
+        <%= form.file_field :photo %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
     <% end %>
-
-
-    <div class="field">
-      <%= form.label :name %>
-      <br>
-      <%= form.text_field :name, placeholder: "Enter Product Name" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :description %>
-      <br>
-      <%= form.text_area :description, placeholder: "Enter Product Description.." %>
-    </div>
-
-    <div class="field", style="max-width: 13rem">
-      <%= form.label :price, "Enter Product Cost" %>
-      <br>
-      <%= form.text_field :price %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-
-  <% end %>
   </div>
+  <% else %>
+    <center>
+    <h1>You're not an admin!</h1>
+    <%= link_to 'Back', products_path %>
+    </center>
+  <% end %>

@@ -1,0 +1,112 @@
+<head>
+  <style>
+    /** {
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }*/
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      border-radius: 2em;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .card:hover{
+      box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    }
+
+    .list-group-flush .list-group-item {
+      font-size: 15px;
+    }
+
+    .css_img {
+      border-radius: 2em 0em 0em 2em;
+      width: 110%;
+    }
+
+    .container {
+      max-width: 65em;
+      margin: 0 auto;
+    }
+
+    .button-container {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 8em;
+    }
+
+
+ </style>
+</head>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Member</h1>
+
+
+<div class="button-container">
+  <% member_exist = false %>
+  <% @members.each do |member| %>
+    <% if current_user.email == member.email %>
+      <% member_exist = true %>
+    <% end %>
+  <% end %>
+  <% if !member_exist %>
+    <%= link_to '<button type="button">Add New Member</button>'.html_safe, new_member_path %>
+  <% end %>
+</div>
+
+
+<br>
+<div class="container">
+  <% @members.each do |member| %>
+        <div class="card mb-3" style="border: 3px solid black;">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <% if member.photo.attached? %>
+                <%= image_tag(member.photo, width: 200) %>
+              <% else %>
+                <%= image_tag("https://nick-network.s3.us-east-2.amazonaws.com/Default.jpg", class: "css_img") %>
+              <% end %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title", style="font-size: 19px;"> <%= member.name %> </h5>
+              </div>
+
+              <table class="table table-sm">
+                <colgroup>
+                  <col span="1" style="width: 15%;">
+                  <col span="1" style="width: 70%;">
+                </colgroup>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Classification </th>
+                    <td> <%= member.classification %> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row", style="font-weight: normal; color: gray;"> Major </th>
+                    <td> <%= member.major %> </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <div class="card-body">
+                <%= link_to 'View', member, :class => "btn btn-primary" %>
+                <% if current_user.email == member.email || current_user.uid == "110391296899575374577" %>
+                  <%= link_to 'Edit', edit_member_path(member), :class => "btn btn-primary"%>
+                  <%= link_to 'Destroy', delete_member_path(member), :class => "btn btn-primary"%>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+  <% end %>
+</div>

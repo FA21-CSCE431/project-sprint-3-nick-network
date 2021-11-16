@@ -1,7 +1,16 @@
-<h1>New Event</h1>
+<% if current_user.uid == "110391296899575374577" %>
+  <h1>New Event</h1>
 
-<%= render 'form', event: @event %>
+  <%= render 'form', event: @event %>
 
-<div class="container", style="margin-left: 10em;">
-  <%= link_to '<button type="button"> Back </button>'.html_safe, events_path %>
-</div>
+  <center>
+    <br>
+    <%= link_to '<button type="button"> Back </button>'.html_safe, events_path %>
+    <br>
+  </center>
+<% else %>
+  <center>
+  <h1>You're not an admin!</h1>
+  <%= link_to 'Back', events_path %>
+  </center>
+<% end %>

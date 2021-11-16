@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# location: spec/unit/unit_eventspec.rb
+# location: spec/unit/unit_event_spec.rb
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do

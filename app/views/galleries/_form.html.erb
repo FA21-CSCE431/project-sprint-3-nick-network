@@ -1,0 +1,83 @@
+<head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 31em;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .bigger-container {
+      max-width: 35em;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+    }
+
+    input {
+      padding: 12px 20px;
+      width: 400px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    input[type=text]:focus {
+      background-color: lightgrey;
+      word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    textarea {
+      width: 400px;
+      height: 100px;
+    }
+
+
+  </style>
+</head>
+<% if current_user.uid == "110391296899575374577" %>
+  <center>
+    <div class="bigger-container">
+      <div class="container">
+        <%= form_with(model: gallery) do |form| %>
+          <% if gallery.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(gallery.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+              <ul>
+                <% gallery.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+          </div>
+
+          <div class="field">
+            <%= form.label :description %>
+            <%= form.text_field :description %>
+          </div>
+
+          <div class="field">
+            <%= form.file_field :photo %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit %>
+          </div>
+        </center>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <center>
+  <h1>You're not an admin!</h1>
+  <%= link_to 'Back', galleries_path %>
+  </center>
+<% end %>

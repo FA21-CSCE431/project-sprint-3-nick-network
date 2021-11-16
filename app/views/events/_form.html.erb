@@ -37,56 +37,67 @@
 
   </style>
 </head>
+<% if current_user.uid == "110391296899575374577" %>
+  <div class="bigger-container">
+    <div class="container">
+    <%= form_with(model: event) do |form| %>
+      <% if event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-<div class="bigger-container">
-  <div class="container">
-  <%= form_with(model: event) do |form| %>
-    <% if event.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+          <ul>
+            <% event.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-        <ul>
-          <% event.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
+
+      <div class="field">
+        <%= form.label :title %>
+        <br>
+        <%= form.text_field :title, placeholder: "Enter title.." %>
       </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <br>
+        <%= form.text_area :description, placeholder: "Enter description.." %>
+      </div>
+
+      <div class="field", style="max-width: 13rem">
+        <%= form.label :date_time, "Date and time" %>
+        <br>
+        <%= form.datetime_field :date_time %>
+      </div>
+
+      <div class="field">
+        <%= form.label :location %>
+        <br>
+        <%= form.text_field :location, placeholder: "Enter location.." %>
+      </div>
+
+      <div class="field">
+        <%= form.label :add_req, "Additional requirements" %>
+        <br>
+        <%= form.text_area :add_req, placeholder: "Enter any additional requirements.." %>
+      </div>
+
+      <div class="field">
+        <%= form.file_field :photo %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
     <% end %>
-
-
-    <div class="field">
-      <%= form.label :title %>
-      <br>
-      <%= form.text_field :title, placeholder: "Enter title.." %>
-    </div>
-
-    <div class="field">
-      <%= form.label :description %>
-      <br>
-      <%= form.text_area :description, placeholder: "Enter description.." %>
-    </div>
-
-    <div class="field", style="max-width: 13rem">
-      <%= form.label :date_time, "Date and time" %>
-      <br>
-      <%= form.datetime_field :date_time %>
-    </div>
-
-    <div class="field">
-      <%= form.label :location %>
-      <br>
-      <%= form.text_field :location, placeholder: "Enter location.." %>
-    </div>
-
-    <div class="field">
-      <%= form.label :add_req, "Additional requirements" %>
-      <br>
-      <%= form.text_area :add_req, placeholder: "Enter any additional requirements.." %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-
-  <% end %>
   </div>
+  </div>
+<% else %>
+  <center>
+  <h1>You're not an admin!</h1>
+  <%= link_to 'Back', events_path %>
+  </center>
+<% end %>

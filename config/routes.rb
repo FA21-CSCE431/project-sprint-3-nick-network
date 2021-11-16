@@ -7,11 +7,15 @@ Rails.application.routes.draw do
     get 'users/sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
   end
   get 'contact/index'
+  resources :galleries
   resources :products
   resources :meetings
   resources :news_posts
+  resources :comments
   get 'about_us/Index'
   resources :events
+  resources :members
+
   resources :events do
     member do
       get :delete
@@ -22,12 +26,27 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+  resources :galleries do
+    member do
+      get :delete
+    end
+  end
+  resources :comments do
+    member do
+      get :delete
+    end
+  end
   resources :meetings do
     member do
       get :delete
     end
   end
   resources :products do
+    member do
+      get :delete
+    end
+  end
+  resources :members do
     member do
       get :delete
     end
