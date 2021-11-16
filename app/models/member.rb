@@ -8,4 +8,7 @@ class Member < ApplicationRecord
   # validates :major, presence: true
   validates :email, presence: true
   # validates :phone, presence: true
+  has_one_attached :photo
+
+  validates :photo, attached: false, content_type: ['image/png', 'image/jpg', 'image/jpeg']
 end
