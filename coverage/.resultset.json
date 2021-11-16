@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Nick-Network/spec/feature/integration_comment_spec.rb": {
+      "/nicknetwork/spec/feature/integration_comment_spec.rb": {
         "lines": [
           null,
           null,
@@ -40,7 +40,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/rails_helper.rb": {
+      "/nicknetwork/spec/rails_helper.rb": {
         "lines": [
           null,
           null,
@@ -125,7 +125,7 @@
           null
         ]
       },
-      "/Nick-Network/config/environment.rb": {
+      "/nicknetwork/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -136,7 +136,7 @@
           1
         ]
       },
-      "/Nick-Network/config/application.rb": {
+      "/nicknetwork/config/application.rb": {
         "lines": [
           null,
           null,
@@ -166,7 +166,7 @@
           null
         ]
       },
-      "/Nick-Network/config/boot.rb": {
+      "/nicknetwork/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -176,7 +176,7 @@
           1
         ]
       },
-      "/Nick-Network/config/environments/test.rb": {
+      "/nicknetwork/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -242,7 +242,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/application_controller_renderer.rb": {
+      "/nicknetwork/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -255,7 +255,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/assets.rb": {
+      "/nicknetwork/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -275,7 +275,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/backtrace_silencers.rb": {
+      "/nicknetwork/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -289,7 +289,7 @@
           1
         ]
       },
-      "/Nick-Network/config/initializers/content_security_policy.rb": {
+      "/nicknetwork/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -324,7 +324,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/cookies_serializer.rb": {
+      "/nicknetwork/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -335,7 +335,7 @@
           1
         ]
       },
-      "/Nick-Network/config/initializers/devise.rb": {
+      "/nicknetwork/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -651,7 +651,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/filter_parameter_logging.rb": {
+      "/nicknetwork/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -663,7 +663,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/inflections.rb": {
+      "/nicknetwork/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -684,7 +684,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/mime_types.rb": {
+      "/nicknetwork/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -693,7 +693,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/permissions_policy.rb": {
+      "/nicknetwork/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -709,7 +709,7 @@
           null
         ]
       },
-      "/Nick-Network/config/initializers/wrap_parameters.rb": {
+      "/nicknetwork/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -729,7 +729,7 @@
           null
         ]
       },
-      "/Nick-Network/config/routes.rb": {
+      "/nicknetwork/config/routes.rb": {
         "lines": [
           null,
           null,
@@ -792,7 +792,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/user.rb": {
+      "/nicknetwork/app/models/user.rb": {
         "lines": [
           null,
           null,
@@ -809,7 +809,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/application_record.rb": {
+      "/nicknetwork/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -818,7 +818,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/about_us_helper.rb": {
+      "/nicknetwork/app/helpers/about_us_helper.rb": {
         "lines": [
           null,
           null,
@@ -826,7 +826,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/application_helper.rb": {
+      "/nicknetwork/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -834,7 +834,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/comments_helper.rb": {
+      "/nicknetwork/app/helpers/comments_helper.rb": {
         "lines": [
           null,
           null,
@@ -842,7 +842,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/contact_helper.rb": {
+      "/nicknetwork/app/helpers/contact_helper.rb": {
         "lines": [
           null,
           null,
@@ -850,7 +850,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/events_helper.rb": {
+      "/nicknetwork/app/helpers/events_helper.rb": {
         "lines": [
           null,
           null,
@@ -858,7 +858,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/galleries_helper.rb": {
+      "/nicknetwork/app/helpers/galleries_helper.rb": {
         "lines": [
           null,
           null,
@@ -866,7 +866,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/landing_helper.rb": {
+      "/nicknetwork/app/helpers/landing_helper.rb": {
         "lines": [
           null,
           null,
@@ -874,7 +874,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/meetings_helper.rb": {
+      "/nicknetwork/app/helpers/meetings_helper.rb": {
         "lines": [
           null,
           null,
@@ -882,7 +882,7 @@
           null
         ]
       },
-      "/Nick-Network/app/helpers/products_helper.rb": {
+      "/nicknetwork/app/helpers/products_helper.rb": {
         "lines": [
           null,
           null,
@@ -890,101 +890,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/feature/integration_event_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Nick-Network/spec/feature/integration_gallery_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Nick-Network/spec/feature/integration_meeting_spec.rb": {
+      "/nicknetwork/spec/feature/integration_event_spec.rb": {
         "lines": [
           null,
           null,
@@ -1011,6 +917,100 @@
           1,
           1,
           1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/nicknetwork/spec/feature/integration_gallery_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/nicknetwork/spec/feature/integration_meeting_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           1,
           1,
@@ -1034,7 +1034,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/feature/integration_member_spec.rb": {
+      "/nicknetwork/spec/feature/integration_member_spec.rb": {
         "lines": [
           null,
           null,
@@ -1102,7 +1102,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/feature/integration_newsfeed_spec.rb": {
+      "/nicknetwork/spec/feature/integration_newsfeed_spec.rb": {
         "lines": [
           null,
           null,
@@ -1141,7 +1141,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/feature/integration_product_spec.rb": {
+      "/nicknetwork/spec/feature/integration_product_spec.rb": {
         "lines": [
           null,
           null,
@@ -1188,7 +1188,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_comment_spec.rb": {
+      "/nicknetwork/spec/unit/unit_comment_spec.rb": {
         "lines": [
           null,
           null,
@@ -1231,7 +1231,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/comment.rb": {
+      "/nicknetwork/app/models/comment.rb": {
         "lines": [
           null,
           null,
@@ -1246,7 +1246,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_event_spec.rb": {
+      "/nicknetwork/spec/unit/unit_event_spec.rb": {
         "lines": [
           null,
           null,
@@ -1280,7 +1280,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/event.rb": {
+      "/nicknetwork/app/models/event.rb": {
         "lines": [
           null,
           null,
@@ -1295,7 +1295,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_gallery_spec.rb": {
+      "/nicknetwork/spec/unit/unit_gallery_spec.rb": {
         "lines": [
           null,
           null,
@@ -1323,7 +1323,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/gallery.rb": {
+      "/nicknetwork/app/models/gallery.rb": {
         "lines": [
           null,
           null,
@@ -1336,7 +1336,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_meeting_spec.rb": {
+      "/nicknetwork/spec/unit/unit_meeting_spec.rb": {
         "lines": [
           null,
           null,
@@ -1370,7 +1370,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/meeting.rb": {
+      "/nicknetwork/app/models/meeting.rb": {
         "lines": [
           null,
           null,
@@ -1385,7 +1385,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_members_spec.rb": {
+      "/nicknetwork/spec/unit/unit_members_spec.rb": {
         "lines": [
           null,
           null,
@@ -1441,7 +1441,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/member.rb": {
+      "/nicknetwork/app/models/member.rb": {
         "lines": [
           null,
           null,
@@ -1453,10 +1453,13 @@
           null,
           1,
           null,
+          1,
+          null,
+          1,
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_newsfeedpost_spec.rb": {
+      "/nicknetwork/spec/unit/unit_newsfeedpost_spec.rb": {
         "lines": [
           null,
           null,
@@ -1495,7 +1498,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/news_post.rb": {
+      "/nicknetwork/app/models/news_post.rb": {
         "lines": [
           null,
           null,
@@ -1509,7 +1512,7 @@
           null
         ]
       },
-      "/Nick-Network/spec/unit/unit_product_spec.rb": {
+      "/nicknetwork/spec/unit/unit_product_spec.rb": {
         "lines": [
           null,
           null,
@@ -1542,7 +1545,7 @@
           null
         ]
       },
-      "/Nick-Network/app/models/product.rb": {
+      "/nicknetwork/app/models/product.rb": {
         "lines": [
           null,
           null,
@@ -1556,7 +1559,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/landing_controller.rb": {
+      "/nicknetwork/app/controllers/landing_controller.rb": {
         "lines": [
           null,
           null,
@@ -1565,7 +1568,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/application_controller.rb": {
+      "/nicknetwork/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -1573,7 +1576,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/users/omniauth_callbacks_controller.rb": {
+      "/nicknetwork/app/controllers/users/omniauth_callbacks_controller.rb": {
         "lines": [
           null,
           null,
@@ -1621,7 +1624,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/news_posts_controller.rb": {
+      "/nicknetwork/app/controllers/news_posts_controller.rb": {
         "lines": [
           null,
           null,
@@ -1700,7 +1703,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/comments_controller.rb": {
+      "/nicknetwork/app/controllers/comments_controller.rb": {
         "lines": [
           null,
           null,
@@ -1783,7 +1786,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/events_controller.rb": {
+      "/nicknetwork/app/controllers/events_controller.rb": {
         "lines": [
           null,
           null,
@@ -1862,7 +1865,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/galleries_controller.rb": {
+      "/nicknetwork/app/controllers/galleries_controller.rb": {
         "lines": [
           null,
           null,
@@ -1941,7 +1944,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/meetings_controller.rb": {
+      "/nicknetwork/app/controllers/meetings_controller.rb": {
         "lines": [
           null,
           null,
@@ -2020,7 +2023,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/members_controller.rb": {
+      "/nicknetwork/app/controllers/members_controller.rb": {
         "lines": [
           null,
           null,
@@ -2099,7 +2102,7 @@
           null
         ]
       },
-      "/Nick-Network/app/controllers/products_controller.rb": {
+      "/nicknetwork/app/controllers/products_controller.rb": {
         "lines": [
           null,
           null,
@@ -2179,6 +2182,6 @@
         ]
       }
     },
-    "timestamp": 1637006796
+    "timestamp": 1637027387
   }
 }
